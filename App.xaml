@@ -1,0 +1,23 @@
+<Application x:Class="Trident.MITM.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             ShutdownMode="OnExplicitShutdown">
+
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="B_Bg0" Color="#12141A"/>
+
+        <SolidColorBrush x:Key="B_Bg1" Color="#1B2030"/>
+
+        <SolidColorBrush x:Key="B_Stroke" Color="#2E3448"/>
+
+        <SolidColorBrush x:Key="B_Fg"  Color="#E6ECFF"/>
+    
+        <SolidColorBrush x:Key="B_Sub" Color="#8EA3C7"/>
+
+        <SolidColorBrush x:Key="B_Accent" Color="#4DA3FF"/>
+ 
+    </Application.Resources>
+
+
+</Application>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="Trident.MITM.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Overlay" Width="220" Height="75"
+        WindowStyle="None" AllowsTransparency="True" Background="#00FFFFFF"
+        Topmost="True" ShowInTaskbar="False">
+    <Border CornerRadius="10" Opacity="0.9" Padding="10"
+            Background="#CC14161C" BorderBrush="#262933" BorderThickness="1"
+            IsHitTestVisible="False">
+        <StackPanel>
+            <TextBlock x:Name="TxtHeader" Text="TRIDENT — En jeu" FontWeight="Bold" Foreground="#F2F8FF" />
+            <TextBlock x:Name="TxtLine1" Foreground="#F2F8FF" />
+            <TextBlock x:Name="TxtLine2" Foreground="#94C3EA" />
+        </StackPanel>
+    </Border>
+</Window>

@@ -1,0 +1,41 @@
+## Visual Studio / .NET
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build outputs
+bin/
+obj/
+TestResults/
+
+## Packages
+packages/
+*.nupkg
+*.snupkg
+
+## Logs
+*.log
+
+## Rider / JetBrains
+.idea/
+*.iml
+
+## Cache
+.cache/
+
+## Others
+*.opendb
+*.VC.db
+*.db
+*.mdb
+*.pidb
+
+## Publish artifacts
+publish/
+
+## Local settings
+appsettings.Development.json
+secrets.json
+

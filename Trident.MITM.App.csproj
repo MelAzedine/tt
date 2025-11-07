@@ -1,0 +1,76 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<!-- seulement si tu appelles des API WinForms (MessageBox, etc.) -->
+		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>TRIDENT.ico</ApplicationIcon>
+		<!-- options publish single-file (facultatif) -->
+		<PublishSingleFile>true</PublishSingleFile>
+		<SelfContained>true</SelfContained>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+		<LangVersion>preview</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Assets\BANNER.png" />
+	  <None Remove="Assets\TRIDENT.png" />
+	  <None Remove="Assets\LOGO.png" />
+	  <None Remove="TRIDENT.ico" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="HidSharp" Version="2.1.0" />
+		<PackageReference Include="Nefarius.ViGEm.Client" Version="1.21.223" />
+		<PackageReference Include="SharpDX.XInput" Version="4.2.0" />
+
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Resource Include="Assets\BANNER.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\TRIDENT.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\LOGO.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="TRIDENT.ico">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+	
+	<!-- Images de jeux et fonctionnalités -->
+	<ItemGroup>
+	  <Resource Include="Assets\fortnite.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\blackops6.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\warzone.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\battlefield6.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\norecoil.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\aim assist.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\rapidfire.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\autoping.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Assets\manettexbox.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+</Project>
