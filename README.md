@@ -13,7 +13,9 @@
 
 *Elevate your gaming experience with professional-grade controller enhancements*
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Profiles](#-game-profiles) • [FAQ](#-faq)
+> 🚀 **New User?** Start with our [Quick Start Guide](QUICKSTART.md) to get running in 5 minutes!
+
+[Quick Start](QUICKSTART.md) • [Features](#-features) • [Installation](INSTALLATION.md) • [User Guide](USER_GUIDE.md) • [FAQ](FAQ.md)
 
 </div>
 
