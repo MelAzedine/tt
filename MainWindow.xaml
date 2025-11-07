@@ -35,7 +35,7 @@
         <DropShadowEffect x:Key="RedGlow" Color="#FF4444" BlurRadius="25" Opacity="0.7" ShadowDepth="0"/>
         <DropShadowEffect x:Key="CardShadow" Color="#000000" BlurRadius="20" Opacity="0.5" ShadowDepth="0"/>
 
-        <!-- Style Feature Card with Animations -->
+        <!-- Enhanced Feature Card Style with Smooth Animations -->
         <Style x:Key="FeatureCard" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
@@ -56,36 +56,16 @@
                                 BorderThickness="1"
                                 CornerRadius="16"
                                 Effect="{StaticResource CardShadow}">
-                            <Border.Triggers>
-                                <EventTrigger RoutedEvent="MouseEnter">
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                                          To="#FF4444"
-                                                          Duration="0:0:0.2"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                                <EventTrigger RoutedEvent="MouseLeave">
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                                          To="#30363D"
-                                                          Duration="0:0:0.2"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                            </Border.Triggers>
                             <ContentPresenter/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="{StaticResource CardHover}"/>
-                                <Setter TargetName="border" Property="Effect" Value="{StaticResource RedGlow}"/>
-                            </Trigger>
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                      Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                      To="#FF4444"
+                                                      Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                                                        To="1.02"
                                                        Duration="0:0:0.2">
@@ -106,6 +86,10 @@
                             <EventTrigger RoutedEvent="MouseLeave">
                                 <BeginStoryboard>
                                     <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                      Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                      To="#30363D"
+                                                      Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                                                        To="1.0"
                                                        Duration="0:0:0.2">
@@ -123,6 +107,10 @@
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource CardHover}"/>
+                                <Setter TargetName="border" Property="Effect" Value="{StaticResource RedGlow}"/>
+                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>

@@ -196,7 +196,7 @@ namespace Trident.MITM
                 TimeoutException => "The operation timed out. Please try again.",
                 InvalidOperationException => "Invalid operation. Please check your configuration.",
                 ArgumentException => "Invalid input. Please check your settings.",
-                _ => $"An unexpected error occurred: {ex.Message}\n\nCheck the log file for more details."
+                _ => "An unexpected error occurred. Please check the log file for more details.\n\nIf this problem persists, contact support."
             };
         }
 

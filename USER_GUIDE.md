@@ -82,6 +82,8 @@ Scrollable content with feature cards or configuration panels
 
 **Purpose**: Compensate for weapon recoil automatically
 
+**ADS** = Aim Down Sights (looking through weapon scope/sight)
+
 #### Basic Configuration
 1. Click the "No Recoil" card on Home tab
 2. Adjust vertical compensation (0.0 - 5.0)
