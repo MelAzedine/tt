@@ -1,0 +1,238 @@
+<Window x:Class="Trident.MITM.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About ARTHEMIS CONTROL" 
+        Height="600" 
+        Width="500"
+        WindowStartupLocation="CenterOwner"
+        Background="#0D1117"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="Bg0" Color="#0D1117"/>
+        <SolidColorBrush x:Key="Bg1" Color="#161B22"/>
+        <SolidColorBrush x:Key="Bg2" Color="#1C2128"/>
+        <SolidColorBrush x:Key="AccentRed" Color="#FF4444"/>
+        <SolidColorBrush x:Key="Fg" Color="#F0F6FC"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#B8BCC0"/>
+        <SolidColorBrush x:Key="Stroke" Color="#30363D"/>
+        <DropShadowEffect x:Key="RedGlow" Color="#FF4444" BlurRadius="25" Opacity="0.7" ShadowDepth="0"/>
+    </Window.Resources>
+
+    <Border BorderBrush="{StaticResource Stroke}" BorderThickness="2" CornerRadius="12">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="40" Opacity="0.8" ShadowDepth="0" Color="#FF4444"/>
+        </Border.Effect>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0" Background="{StaticResource Bg1}" CornerRadius="10,10,0,0" Padding="20">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Image Source="pack://application:,,,/Trident.MITM.App;component/Assets/LOGO.png" 
+                               Width="50" Height="50" Margin="0,0,15,0"/>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="ARTHEMIS CONTROL" 
+                                       FontSize="24" 
+                                       FontWeight="Bold" 
+                                       Foreground="{StaticResource Fg}"/>
+                            <TextBlock Text="Professional Gamepad Control System" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource FgSecondary}"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <Button Content="✕" 
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            Foreground="{StaticResource Fg}"
+                            BorderThickness="0"
+                            FontSize="20"
+                            Width="30"
+                            Height="30"
+                            Cursor="Hand"
+                            Click="CloseButton_Click"/>
+                </Grid>
+            </Border>
+
+            <!-- Content -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="20">
+                    
+                    <!-- Version Info -->
+                    <Border Background="{StaticResource Bg2}" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Version:" Foreground="{StaticResource FgSecondary}" Margin="0,0,15,8"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="6.0.3 PRO" Foreground="{StaticResource AccentRed}" FontWeight="Bold" Margin="0,0,0,8"/>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Build:" Foreground="{StaticResource FgSecondary}" Margin="0,0,15,8"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="2024.01.15" Foreground="{StaticResource Fg}" Margin="0,0,0,8"/>
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="Framework:" Foreground="{StaticResource FgSecondary}" Margin="0,0,15,8"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Text=".NET 8.0 (WPF)" Foreground="{StaticResource Fg}" Margin="0,0,0,8"/>
+
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="Platform:" Foreground="{StaticResource FgSecondary}" Margin="0,0,15,0"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" Text="Windows 10/11 (x64)" Foreground="{StaticResource Fg}"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Description -->
+                    <TextBlock Text="ARTHEMIS CONTROL is a professional-grade gamepad enhancement software that provides advanced features like anti-recoil compensation, aim assist, rapid-fire, and comprehensive controller customization."
+                               TextWrapping="Wrap"
+                               Foreground="{StaticResource Fg}"
+                               FontSize="13"
+                               LineHeight="20"
+                               Margin="0,0,0,20"/>
+
+                    <!-- Features -->
+                    <TextBlock Text="Features" FontSize="16" FontWeight="Bold" Foreground="{StaticResource Fg}" Margin="0,0,0,10"/>
+                    <Border Background="{StaticResource Bg2}" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                        <StackPanel>
+                            <TextBlock Text="✓ Advanced Anti-Recoil System" Foreground="{StaticResource Fg}" Margin="0,0,0,5"/>
+                            <TextBlock Text="✓ Professional Aim Assist (3 modes)" Foreground="{StaticResource Fg}" Margin="0,0,0,5"/>
+                            <TextBlock Text="✓ Configurable Rapid-Fire" Foreground="{StaticResource Fg}" Margin="0,0,0,5"/>
+                            <TextBlock Text="✓ Auto-Ping System" Foreground="{StaticResource Fg}" Margin="0,0,0,5"/>
+                            <TextBlock Text="✓ Game Profiles (Fortnite, COD, etc.)" Foreground="{StaticResource Fg}" Margin="0,0,0,5"/>
+                            <TextBlock Text="✓ Dead Zone Configuration" Foreground="{StaticResource Fg}" Margin="0,0,0,5"/>
+                            <TextBlock Text="✓ System Optimization Tools" Foreground="{StaticResource Fg}" Margin="0,0,0,5"/>
+                            <TextBlock Text="✓ KB/M Hybrid Support" Foreground="{StaticResource Fg}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Links -->
+                    <TextBlock Text="Links" FontSize="16" FontWeight="Bold" Foreground="{StaticResource Fg}" Margin="0,0,0,10"/>
+                    <Border Background="{StaticResource Bg2}" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                        <StackPanel>
+                            <TextBlock Foreground="{StaticResource FgSecondary}" Margin="0,0,0,5">
+                                <Hyperlink NavigateUri="https://arthemiscontrol.com" RequestNavigate="Hyperlink_RequestNavigate" Foreground="{StaticResource AccentRed}">
+                                    <TextBlock Text="🌐 Website: arthemiscontrol.com"/>
+                                </Hyperlink>
+                            </TextBlock>
+                            <TextBlock Foreground="{StaticResource FgSecondary}" Margin="0,0,0,5">
+                                <Hyperlink NavigateUri="https://github.com/MelAzedine/tt" RequestNavigate="Hyperlink_RequestNavigate" Foreground="{StaticResource AccentRed}">
+                                    <TextBlock Text="💻 GitHub: github.com/MelAzedine/tt"/>
+                                </Hyperlink>
+                            </TextBlock>
+                            <TextBlock Foreground="{StaticResource FgSecondary}" Margin="0,0,0,5">
+                                <Hyperlink NavigateUri="https://discord.gg/arthemis" RequestNavigate="Hyperlink_RequestNavigate" Foreground="{StaticResource AccentRed}">
+                                    <TextBlock Text="💬 Discord: discord.gg/arthemis"/>
+                                </Hyperlink>
+                            </TextBlock>
+                            <TextBlock Foreground="{StaticResource FgSecondary}">
+                                <Hyperlink NavigateUri="mailto:contact@arthemiscontrol.com" RequestNavigate="Hyperlink_RequestNavigate" Foreground="{StaticResource AccentRed}">
+                                    <TextBlock Text="📧 Email: contact@arthemiscontrol.com"/>
+                                </Hyperlink>
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Credits -->
+                    <TextBlock Text="Credits" FontSize="16" FontWeight="Bold" Foreground="{StaticResource Fg}" Margin="0,0,0,10"/>
+                    <Border Background="{StaticResource Bg2}" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                        <StackPanel>
+                            <TextBlock Text="Developed by MelAzedine" Foreground="{StaticResource Fg}" Margin="0,0,0,10"/>
+                            <TextBlock Text="Third-Party Components:" Foreground="{StaticResource FgSecondary}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <TextBlock Text="• ViGEm Bus (MIT License)" Foreground="{StaticResource Fg}" Margin="0,0,0,3"/>
+                            <TextBlock Text="• HidSharp (Apache 2.0)" Foreground="{StaticResource Fg}" Margin="0,0,0,3"/>
+                            <TextBlock Text="• SharpDX (MIT License)" Foreground="{StaticResource Fg}" Margin="0,0,0,3"/>
+                            <TextBlock Text="• Nefarius.ViGEm.Client (MIT)" Foreground="{StaticResource Fg}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Copyright -->
+                    <TextBlock Text="© 2024 MelAzedine. All Rights Reserved." 
+                               Foreground="{StaticResource FgSecondary}" 
+                               FontSize="11" 
+                               HorizontalAlignment="Center"
+                               Margin="0,10,0,0"/>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Footer -->
+            <Border Grid.Row="2" Background="{StaticResource Bg1}" CornerRadius="0,0,10,10" Padding="20">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="View Logs" 
+                            Background="{StaticResource Bg2}"
+                            Foreground="{StaticResource Fg}"
+                            BorderBrush="{StaticResource Stroke}"
+                            BorderThickness="1"
+                            Padding="15,8"
+                            FontSize="13"
+                            Margin="0,0,10,0"
+                            Cursor="Hand"
+                            Click="ViewLogs_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" 
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    CornerRadius="8"
+                                                    Padding="{TemplateBinding Padding}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    
+                    <Button Content="Check for Updates" 
+                            Background="{StaticResource AccentRed}"
+                            Foreground="{StaticResource Fg}"
+                            BorderThickness="0"
+                            Padding="15,8"
+                            FontSize="13"
+                            Cursor="Hand"
+                            Click="CheckUpdates_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border x:Name="border"
+                                                    Background="{TemplateBinding Background}" 
+                                                    CornerRadius="8"
+                                                    Padding="{TemplateBinding Padding}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter TargetName="border" Property="Background" Value="#FF6666"/>
+                                                    <Setter TargetName="border" Property="Effect" Value="{StaticResource RedGlow}"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
