@@ -1306,16 +1306,41 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <!-- Navigation -->
-                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0">
-                        <Button x:Name="HomeTabBtn" Content="{DynamicResource Home}" Style="{StaticResource TabButton}" Tag="Home" Click="ShowTab_Click"/>
-                        <Button x:Name="ProfilesTabBtn" Content="{DynamicResource Profiles}" Style="{StaticResource TabButton}" Tag="Profiles" Click="ShowTab_Click"/>
-                        <Button x:Name="ControllerTabBtn" Content="{DynamicResource Controller}" Style="{StaticResource TabButton}" Tag="Controller" Click="ShowTab_Click"/>
-                        <Button x:Name="AdvancedTabBtn" Content="⚡ ADVANCED" Style="{StaticResource TabButton}" Tag="Advanced" Click="OpenAdvancedFeatures_Click" ToolTip="Macros, Button Remapping &amp; Combos"/>
-                        <Button x:Name="KeyboardMouseTabBtn" Content="{DynamicResource KeyboardMouse}" Style="{StaticResource TabButton}" Tag="KeyboardMouse" Click="ShowTab_Click"/>
-                        <Button x:Name="SettingsTabBtn" Content="{DynamicResource Settings}" Style="{StaticResource TabButton}" Tag="Settings" Click="ShowTab_Click"/>
-                        <Button x:Name="OptimizationTabBtn" Content="{DynamicResource Optimization}" Style="{StaticResource TabButton}" Tag="Optimization" Click="ShowTab_Click"/>
-                        <Button x:Name="LicenseTabBtn" Content="{DynamicResource License}" Style="{StaticResource TabButton}" Tag="License" Click="ShowTab_Click"/>
+                    <!-- Navigation - Modern Grouped Design -->
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,0">
+                        <!-- Main Navigation Group -->
+                        <Border Background="{StaticResource Bg2}" 
+                                CornerRadius="12" 
+                                Padding="8,4"
+                                Margin="0,0,15,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="HomeTabBtn" Content="🏠 {DynamicResource Home}" Style="{StaticResource TabButton}" Tag="Home" Click="ShowTab_Click" Padding="16,12"/>
+                                <Button x:Name="ProfilesTabBtn" Content="📋 {DynamicResource Profiles}" Style="{StaticResource TabButton}" Tag="Profiles" Click="ShowTab_Click" Padding="16,12"/>
+                                <Button x:Name="ControllerTabBtn" Content="🎮 {DynamicResource Controller}" Style="{StaticResource TabButton}" Tag="Controller" Click="ShowTab_Click" Padding="16,12"/>
+                            </StackPanel>
+                        </Border>
+                        
+                        <!-- Advanced Features Group -->
+                        <Border Background="{StaticResource Bg2}" 
+                                CornerRadius="12" 
+                                Padding="8,4"
+                                Margin="0,0,15,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="AdvancedTabBtn" Content="⚡ ADVANCED" Style="{StaticResource TabButton}" Tag="Advanced" Click="OpenAdvancedFeatures_Click" ToolTip="Macros, Button Remapping &amp; Combos" Padding="16,12"/>
+                                <Button x:Name="KeyboardMouseTabBtn" Content="⌨️ KB+M" Style="{StaticResource TabButton}" Tag="KeyboardMouse" Click="ShowTab_Click" Padding="16,12"/>
+                            </StackPanel>
+                        </Border>
+                        
+                        <!-- System Group -->
+                        <Border Background="{StaticResource Bg2}" 
+                                CornerRadius="12" 
+                                Padding="8,4">
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="SettingsTabBtn" Content="⚙️ {DynamicResource Settings}" Style="{StaticResource TabButton}" Tag="Settings" Click="ShowTab_Click" Padding="16,12"/>
+                                <Button x:Name="OptimizationTabBtn" Content="🚀 {DynamicResource Optimization}" Style="{StaticResource TabButton}" Tag="Optimization" Click="ShowTab_Click" Padding="16,12"/>
+                                <Button x:Name="LicenseTabBtn" Content="🔑 {DynamicResource License}" Style="{StaticResource TabButton}" Tag="License" Click="ShowTab_Click" Padding="16,12"/>
+                            </StackPanel>
+                        </Border>
                     </StackPanel>
 
                     <!-- Version -->
