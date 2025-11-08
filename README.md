@@ -23,6 +23,20 @@
 
 ## 🌟 Features
 
+### ✨ BRAND NEW: Visual Enhancements
+**Premium gaming UI with next-generation effects:**
+- 🎨 **Glassmorphism Cards**: Beautiful glass-like effects with shimmer overlays
+- 🎆 **Animated Particle Background**: Floating colorful particles create immersive atmosphere
+- 💫 **Pulsing Active Indicators**: Live breathing glow effects on active features
+- 🌈 **RGB Animated Logo**: Color-cycling border with smooth transitions
+- ⚡ **Enhanced Hover Effects**: Multi-layer interactions with scale and glow
+- 🎯 **Modern Toggle Switches**: Smooth iOS-style switches with bounce animations
+- 🎬 **Animated Tooltips**: Premium pop-in effects with glow
+- 🔆 **Glowing PRO Badge**: Constant red glow for premium feel
+- 🌊 **Smooth Transitions**: Seamless navigation with fade and slide effects
+
+👉 **[See Full Visual Enhancement Details](VISUAL_ENHANCEMENTS.md)**
+
 ### 🎯 Anti-Recoil System
 Advanced weapon recoil compensation with:
 - **Vertical & Horizontal Control**: Precise compensation for both axes
@@ -366,7 +380,20 @@ Contributions are welcome! Please:
 
 ## 📊 Version History
 
-### v6.0.3 (Current)
+### v6.0.4 (BANGER UPDATE) 🔥
+- ✨ **MAJOR**: Glassmorphism UI with glass-like card effects
+- 🎆 **NEW**: Animated particle background system
+- 💫 **NEW**: Pulsing glow animations on active features
+- 🌈 **NEW**: RGB color-cycling logo border
+- ⚡ **ENHANCED**: Multi-layer hover effects with scale transforms
+- 🎯 **ENHANCED**: Modern toggle switches with bounce animations
+- 🎬 **NEW**: Animated tooltips with pop-in effects
+- 🔆 **ENHANCED**: Glowing PRO badge with drop shadow
+- 🌊 **NEW**: Smooth tab transitions with underline animations
+- 📝 **ADDED**: Comprehensive visual enhancement documentation
+- 🎨 **IMPROVED**: Overall UI polish and professional appearance
+
+### v6.0.3
 - ✨ Enhanced UI with modern design
 - 🎮 Improved controller detection
 - 🎯 Better aim assist algorithms
