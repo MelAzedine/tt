@@ -13,28 +13,28 @@
         MouseDown="Window_MouseDown">
 
     <Window.Resources>
-        <!-- Palette premium purple/cyan -->
-        <SolidColorBrush x:Key="Bg0" Color="#0A0E1A"/>
-        <SolidColorBrush x:Key="Bg1" Color="#111827"/>
-        <SolidColorBrush x:Key="Bg2" Color="#1F2937"/>
-        <SolidColorBrush x:Key="Card" Color="#1E293B"/>
-        <SolidColorBrush x:Key="CardHover" Color="#334155"/>
-        <SolidColorBrush x:Key="Stroke" Color="#475569"/>
-        <SolidColorBrush x:Key="AccentPurple" Color="#A855F7"/>
-        <SolidColorBrush x:Key="AccentPurpleHover" Color="#C084FC"/>
-        <SolidColorBrush x:Key="AccentCyan" Color="#06B6D4"/>
-        <SolidColorBrush x:Key="AccentSilver" Color="#CBD5E1"/>
-        <SolidColorBrush x:Key="Fg" Color="#F1F5F9"/>
-        <SolidColorBrush x:Key="FgSecondary" Color="#94A3B8"/>
+        <!-- Palette ultra-moderne Orange/Teal -->
+        <SolidColorBrush x:Key="Bg0" Color="#0F1419"/>
+        <SolidColorBrush x:Key="Bg1" Color="#1A1F2E"/>
+        <SolidColorBrush x:Key="Bg2" Color="#242B3D"/>
+        <SolidColorBrush x:Key="Card" Color="#2A3447"/>
+        <SolidColorBrush x:Key="CardHover" Color="#344156"/>
+        <SolidColorBrush x:Key="Stroke" Color="#3D4A5C"/>
+        <SolidColorBrush x:Key="AccentPurple" Color="#FF6B35"/>
+        <SolidColorBrush x:Key="AccentPurpleHover" Color="#FF8C61"/>
+        <SolidColorBrush x:Key="AccentCyan" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="AccentSilver" Color="#E0E7F0"/>
+        <SolidColorBrush x:Key="Fg" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#9BA3B4"/>
 
         <LinearGradientBrush x:Key="AccentGradient" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#A855F7" Offset="0"/>
-            <GradientStop Color="#7C3AED" Offset="1"/>
+            <GradientStop Color="#FF6B35" Offset="0"/>
+            <GradientStop Color="#E85A2B" Offset="1"/>
         </LinearGradientBrush>
 
         <LinearGradientBrush x:Key="CardGradient" StartPoint="0,0" EndPoint="0,1">
-            <GradientStop Color="#1E293B" Offset="0"/>
-            <GradientStop Color="#1F2937" Offset="1"/>
+            <GradientStop Color="#2A3447" Offset="0"/>
+            <GradientStop Color="#242B3D" Offset="1"/>
         </LinearGradientBrush>
 
         <!-- Animation d'entrée -->
@@ -63,7 +63,7 @@
                                 CornerRadius="10" 
                                 SnapsToDevicePixels="True">
                             <Border.Effect>
-                                <DropShadowEffect BlurRadius="15" Opacity="0.4" ShadowDepth="0" Color="#A855F7"/>
+                                <DropShadowEffect BlurRadius="18" Opacity="0.5" ShadowDepth="0" Color="#FF6B35"/>
                             </Border.Effect>
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="24,0"/>
                         </Border>
@@ -72,7 +72,7 @@
                                 <Setter TargetName="border" Property="Background" Value="{StaticResource AccentPurpleHover}"/>
                                 <Setter TargetName="border" Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect BlurRadius="20" Opacity="0.6" ShadowDepth="0" Color="#C084FC"/>
+                                        <DropShadowEffect BlurRadius="22" Opacity="0.7" ShadowDepth="0" Color="#FF8C61"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>

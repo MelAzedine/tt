@@ -11,48 +11,48 @@
         <!-- Version 6.0.4 ULTIMATE                                      -->
         <!-- ═══════════════════════════════════════════════════════════ -->
 
-        <!-- ═══ NEW PROFESSIONAL COLOR PALETTE ═══ -->
-        <SolidColorBrush x:Key="B_Bg0" Color="#0A0E1A"/>
-        <SolidColorBrush x:Key="B_Bg1" Color="#111827"/>
-        <SolidColorBrush x:Key="B_Bg2" Color="#1F2937"/>
-        <SolidColorBrush x:Key="B_Card" Color="#1E293B"/>
-        <SolidColorBrush x:Key="B_CardHover" Color="#334155"/>
-        <SolidColorBrush x:Key="B_Stroke" Color="#475569"/>
+        <!-- ═══ NEW ULTRA-MODERN COLOR PALETTE ═══ -->
+        <SolidColorBrush x:Key="B_Bg0" Color="#0F1419"/>
+        <SolidColorBrush x:Key="B_Bg1" Color="#1A1F2E"/>
+        <SolidColorBrush x:Key="B_Bg2" Color="#242B3D"/>
+        <SolidColorBrush x:Key="B_Card" Color="#2A3447"/>
+        <SolidColorBrush x:Key="B_CardHover" Color="#344156"/>
+        <SolidColorBrush x:Key="B_Stroke" Color="#3D4A5C"/>
         
-        <!-- Premium Purple/Cyan Accents -->
-        <SolidColorBrush x:Key="B_AccentPurple" Color="#A855F7"/>
-        <SolidColorBrush x:Key="B_AccentPurpleBright" Color="#C084FC"/>
-        <SolidColorBrush x:Key="B_AccentPurpleDark" Color="#7C3AED"/>
-        <SolidColorBrush x:Key="B_AccentCyan" Color="#06B6D4"/>
-        <SolidColorBrush x:Key="B_AccentCyanBright" Color="#22D3EE"/>
-        <SolidColorBrush x:Key="B_AccentGreen" Color="#10B981"/>
-        <SolidColorBrush x:Key="B_Accent" Color="#A855F7"/>
+        <!-- Premium Orange/Teal Accents -->
+        <SolidColorBrush x:Key="B_AccentPurple" Color="#FF6B35"/>
+        <SolidColorBrush x:Key="B_AccentPurpleBright" Color="#FF8C61"/>
+        <SolidColorBrush x:Key="B_AccentPurpleDark" Color="#E85A2B"/>
+        <SolidColorBrush x:Key="B_AccentCyan" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="B_AccentCyanBright" Color="#33E0FF"/>
+        <SolidColorBrush x:Key="B_AccentGreen" Color="#00E676"/>
+        <SolidColorBrush x:Key="B_Accent" Color="#FF6B35"/>
         
         <!-- Text Colors -->
-        <SolidColorBrush x:Key="B_Fg" Color="#F1F5F9"/>
-        <SolidColorBrush x:Key="B_Sub" Color="#94A3B8"/>
-        <SolidColorBrush x:Key="B_Muted" Color="#64748B"/>
+        <SolidColorBrush x:Key="B_Fg" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="B_Sub" Color="#9BA3B4"/>
+        <SolidColorBrush x:Key="B_Muted" Color="#6B7280"/>
         
         <!-- Premium Gradient Brushes -->
         <LinearGradientBrush x:Key="B_GradientPurple" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#A855F7" Offset="0"/>
-            <GradientStop Color="#7C3AED" Offset="1"/>
+            <GradientStop Color="#FF6B35" Offset="0"/>
+            <GradientStop Color="#E85A2B" Offset="1"/>
         </LinearGradientBrush>
         
         <LinearGradientBrush x:Key="B_GradientCyan" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#06B6D4" Offset="0"/>
-            <GradientStop Color="#0891B2" Offset="1"/>
+            <GradientStop Color="#00D9FF" Offset="0"/>
+            <GradientStop Color="#00B8DB" Offset="1"/>
         </LinearGradientBrush>
         
         <LinearGradientBrush x:Key="B_GradientMixed" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#A855F7" Offset="0"/>
-            <GradientStop Color="#06B6D4" Offset="1"/>
+            <GradientStop Color="#FF6B35" Offset="0"/>
+            <GradientStop Color="#00D9FF" Offset="1"/>
         </LinearGradientBrush>
         
         <!-- ═══ ENHANCED EFFECTS ═══ -->
-        <DropShadowEffect x:Key="B_GlowPurple" Color="#A855F7" BlurRadius="30" Opacity="0.8" ShadowDepth="0"/>
-        <DropShadowEffect x:Key="B_GlowCyan" Color="#06B6D4" BlurRadius="30" Opacity="0.8" ShadowDepth="0"/>
-        <DropShadowEffect x:Key="B_CardShadow" Color="#000000" BlurRadius="28" Opacity="0.7" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="B_GlowPurple" Color="#FF6B35" BlurRadius="35" Opacity="0.9" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="B_GlowCyan" Color="#00D9FF" BlurRadius="35" Opacity="0.9" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="B_CardShadow" Color="#000000" BlurRadius="32" Opacity="0.8" ShadowDepth="0"/>
         
         <!-- ═══ PROFESSIONAL COMBOBOX ═══ -->
         <Style x:Key="ProfessionalComboBox" TargetType="ComboBox">

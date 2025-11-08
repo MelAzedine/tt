@@ -11,19 +11,19 @@
         MouseDown="Window_MouseDown">
 
     <Window.Resources>
-        <!-- Colors -->
-        <SolidColorBrush x:Key="Bg0" Color="#0A0E1A"/>
-        <SolidColorBrush x:Key="Bg1" Color="#111827"/>
-        <SolidColorBrush x:Key="Bg2" Color="#1F2937"/>
-        <SolidColorBrush x:Key="Card" Color="#1E293B"/>
-        <SolidColorBrush x:Key="Stroke" Color="#475569"/>
-        <SolidColorBrush x:Key="AccentRed" Color="#A855F7"/>
-        <SolidColorBrush x:Key="Fg" Color="#F1F5F9"/>
-        <SolidColorBrush x:Key="FgSecondary" Color="#94A3B8"/>
+        <!-- Colors Ultra-Modernes -->
+        <SolidColorBrush x:Key="Bg0" Color="#0F1419"/>
+        <SolidColorBrush x:Key="Bg1" Color="#1A1F2E"/>
+        <SolidColorBrush x:Key="Bg2" Color="#242B3D"/>
+        <SolidColorBrush x:Key="Card" Color="#2A3447"/>
+        <SolidColorBrush x:Key="Stroke" Color="#3D4A5C"/>
+        <SolidColorBrush x:Key="AccentRed" Color="#FF6B35"/>
+        <SolidColorBrush x:Key="Fg" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#9BA3B4"/>
         
         <!-- Effects -->
-        <DropShadowEffect x:Key="RedGlow" Color="#A855F7" BlurRadius="20" Opacity="0.6" ShadowDepth="0"/>
-        <DropShadowEffect x:Key="CardShadow" Color="#000000" BlurRadius="15" Opacity="0.4" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="RedGlow" Color="#FF6B35" BlurRadius="25" Opacity="0.7" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="CardShadow" Color="#000000" BlurRadius="18" Opacity="0.5" ShadowDepth="0"/>
 
         <!-- Button Style -->
         <Style x:Key="ModernButton" TargetType="Button">
@@ -50,7 +50,7 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#334155"/>
+                    <Setter Property="Background" Value="#344156"/>
                     <Setter Property="BorderBrush" Value="{StaticResource AccentRed}"/>
                 </Trigger>
             </Style.Triggers>
@@ -62,7 +62,7 @@
             <Setter Property="Foreground" Value="White"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#C084FC"/>
+                    <Setter Property="Background" Value="#FF8C61"/>
                 </Trigger>
             </Style.Triggers>
         </Style>

@@ -8,21 +8,21 @@
         Background="#0A0B10">
     
     <Window.Resources>
-        <!-- Professional Gaming Colors -->
-        <SolidColorBrush x:Key="Bg0" Color="#0A0B10"/>
-        <SolidColorBrush x:Key="Bg1" Color="#12131A"/>
-        <SolidColorBrush x:Key="Bg2" Color="#1A1B24"/>
-        <SolidColorBrush x:Key="AccentCyan" Color="#06B6D4"/>
-        <SolidColorBrush x:Key="AccentRed" Color="#FF3366"/>
-        <SolidColorBrush x:Key="Fg" Color="#F2F7FF"/>
-        <SolidColorBrush x:Key="FgSub" Color="#A0A8B8"/>
+        <!-- Professional Gaming Colors - Ultra Modern -->
+        <SolidColorBrush x:Key="Bg0" Color="#0F1419"/>
+        <SolidColorBrush x:Key="Bg1" Color="#1A1F2E"/>
+        <SolidColorBrush x:Key="Bg2" Color="#242B3D"/>
+        <SolidColorBrush x:Key="AccentCyan" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="AccentRed" Color="#FF6B35"/>
+        <SolidColorBrush x:Key="Fg" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="FgSub" Color="#9BA3B4"/>
         
         <!-- Professional Button Style -->
         <Style x:Key="ModernButton" TargetType="Button">
-            <Setter Property="Background" Value="#1A1B24"/>
-            <Setter Property="Foreground" Value="#F2F7FF"/>
-            <Setter Property="BorderBrush" Value="#2A2B38"/>
-            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="#242B3D"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#3D4A5C"/>
+            <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="Padding" Value="20,12"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
