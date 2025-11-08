@@ -1289,6 +1289,7 @@
                         <Button x:Name="HomeTabBtn" Content="{DynamicResource Home}" Style="{StaticResource TabButton}" Tag="Home" Click="ShowTab_Click"/>
                         <Button x:Name="ProfilesTabBtn" Content="{DynamicResource Profiles}" Style="{StaticResource TabButton}" Tag="Profiles" Click="ShowTab_Click"/>
                         <Button x:Name="ControllerTabBtn" Content="{DynamicResource Controller}" Style="{StaticResource TabButton}" Tag="Controller" Click="ShowTab_Click"/>
+                        <Button x:Name="AdvancedTabBtn" Content="⚡ ADVANCED" Style="{StaticResource TabButton}" Tag="Advanced" Click="OpenAdvancedFeatures_Click" ToolTip="Macros, Button Remapping &amp; Combos"/>
                         <Button x:Name="KeyboardMouseTabBtn" Content="{DynamicResource KeyboardMouse}" Style="{StaticResource TabButton}" Tag="KeyboardMouse" Click="ShowTab_Click"/>
                         <Button x:Name="SettingsTabBtn" Content="{DynamicResource Settings}" Style="{StaticResource TabButton}" Tag="Settings" Click="ShowTab_Click"/>
                         <Button x:Name="OptimizationTabBtn" Content="{DynamicResource Optimization}" Style="{StaticResource TabButton}" Tag="Optimization" Click="ShowTab_Click"/>
@@ -1309,7 +1310,7 @@
                                        FontWeight="Bold" 
                                        FontSize="12"/>
                         </Border>
-                        <TextBlock Text="6.0.3" 
+                        <TextBlock Text="6.0.4 BANGER" 
                                    Foreground="{StaticResource FgSecondary}" 
                                    FontSize="12"
                                    VerticalAlignment="Center"/>

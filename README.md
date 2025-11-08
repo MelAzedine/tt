@@ -6,7 +6,7 @@
 
 **Professional Gamepad Control System**
 
-[![Version](https://img.shields.io/badge/version-6.0.3-red.svg)](https://github.com/MelAzedine/tt)
+[![Version](https://img.shields.io/badge/version-6.0.4-red.svg)](https://github.com/MelAzedine/tt)
 [![License](https://img.shields.io/badge/license-PRO-red.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](https://www.microsoft.com/windows)
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
@@ -23,7 +23,28 @@
 
 ## 🌟 Features
 
-### ✨ BRAND NEW: Visual Enhancements
+### ⚡ BRAND NEW: Advanced Professional Features
+**Transform your gaming with professional-grade controller customization:**
+- 🎬 **Macro System**: Record and playback complex button sequences with precise timing
+  - Loop control (infinite or specific count)
+  - Import/export macro libraries
+  - Automatic optimization
+- 🎯 **Button Remapping**: Complete controller customization
+  - Per-profile button mappings
+  - Modifier key support (L1/R1 as modifiers)
+  - Quick swap functionality
+  - Individual button turbo mode
+- ⚔️ **Combo Detection**: Fighting game style input sequences
+  - Real-time combo detection
+  - Quick-tap combos (double-tap, triple-tap)
+  - Custom timing windows
+  - Success statistics
+- 📊 **Statistics Dashboard**: Track your gameplay enhancements
+- 💾 **Profile Management**: Save, load, and share your configurations
+
+👉 **[See Full Advanced Features Guide](ADVANCED_FEATURES.md)**
+
+### ✨ Visual Enhancements
 **Premium gaming UI with next-generation effects:**
 - 🎨 **Glassmorphism Cards**: Beautiful glass-like effects with shimmer overlays
 - 🎆 **Animated Particle Background**: Floating colorful particles create immersive atmosphere
@@ -381,6 +402,18 @@ Contributions are welcome! Please:
 ## 📊 Version History
 
 ### v6.0.4 (BANGER UPDATE) 🔥
+#### Professional Advanced Features
+- ⚡ **NEW**: Complete Macro System - Record and playback complex button sequences
+- 🎯 **NEW**: Advanced Button Remapping - Per-profile mappings with modifier support
+- ⚔️ **NEW**: Combo Detection System - Fighting game style input sequences
+- 🎮 **NEW**: 100% Interactive Controller - Full customization interface
+- 💾 **NEW**: Import/Export Profiles - Share and backup configurations
+- 📊 **NEW**: Statistics Dashboard - Track macro and combo usage
+- 🎨 **NEW**: Professional Advanced Features UI - Modern glassmorphism interface
+- 🔧 **NEW**: Individual Button Turbo Mode - Per-button rapid fire with frequency control
+- 📚 **NEW**: Comprehensive Documentation - Complete feature guides and API reference
+
+#### Previous Enhancements (v6.0.3)
 - ✨ **MAJOR**: Glassmorphism UI with glass-like card effects
 - 🎆 **NEW**: Animated particle background system
 - 💫 **NEW**: Pulsing glow animations on active features

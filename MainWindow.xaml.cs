@@ -904,6 +904,17 @@ namespace Trident.MITM
             try { _client = new ViGEmClient(); VigemStatus = "installé"; } catch { VigemStatus = "non installé (driver requis)"; }
             DeviceList.Local.Changed += (_, __) => Dispatcher.Invoke(RebindIfNeeded);
             
+            // Initialize advanced features
+            try
+            {
+                InitializeAdvancedFeatures();
+                LoadAdvancedFeaturesConfig();
+            }
+            catch (Exception ex)
+            {
+                Log($"Warning: Could not initialize advanced features: {ex.Message}");
+            }
+            
             // Initialiser l'onglet actif au démarrage
             Dispatcher.BeginInvoke(new Action(() =>
             {
