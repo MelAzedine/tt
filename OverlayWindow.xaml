@@ -1,16 +1,147 @@
 ﻿<Window x:Class="Trident.MITM.OverlayWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Overlay" Width="220" Height="75"
-        WindowStyle="None" AllowsTransparency="True" Background="#00FFFFFF"
+        Title="Overlay" Width="320" Height="140"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         Topmost="True" ShowInTaskbar="False">
-    <Border CornerRadius="10" Opacity="0.9" Padding="10"
-            Background="#CC14161C" BorderBrush="#262933" BorderThickness="1"
-            IsHitTestVisible="False">
-        <StackPanel>
-            <TextBlock x:Name="TxtHeader" Text="TRIDENT — En jeu" FontWeight="Bold" Foreground="#F2F8FF" />
-            <TextBlock x:Name="TxtLine1" Foreground="#F2F8FF" />
-            <TextBlock x:Name="TxtLine2" Foreground="#94C3EA" />
-        </StackPanel>
+    
+    <Window.Resources>
+        <!-- Gaming Overlay Colors -->
+        <SolidColorBrush x:Key="OverlayBg" Color="#DD0A0B10"/>
+        <SolidColorBrush x:Key="OverlayAccent" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="OverlayText" Color="#F2F7FF"/>
+        <SolidColorBrush x:Key="OverlayGold" Color="#FFD700"/>
+        
+        <!-- Neon Glow Effect -->
+        <DropShadowEffect x:Key="NeonGlow" Color="#00D9FF" BlurRadius="20" Opacity="0.9" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="GoldGlow" Color="#FFD700" BlurRadius="15" Opacity="0.8" ShadowDepth="0"/>
+    </Window.Resources>
+    
+    <!-- Glassmorphism Overlay with Neon Border -->
+    <Border CornerRadius="16" Padding="20,16" BorderThickness="2" Opacity="0.95">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#DD0A0B10" Offset="0"/>
+                <GradientStop Color="#CC12131A" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#00D9FF" Offset="0"/>
+                <GradientStop Color="#FF3366" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Effect>
+            <DropShadowEffect Color="#000000" BlurRadius="30" Opacity="0.7" ShadowDepth="0"/>
+        </Border.Effect>
+        
+        <Grid>
+            <!-- Animated Background Pulse -->
+            <Border x:Name="PulseLayer" CornerRadius="14" Opacity="0.15" IsHitTestVisible="False">
+                <Border.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#00D9FF" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="1"/>
+                    </RadialGradientBrush>
+                </Border.Background>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                               From="0.1" To="0.3" Duration="0:0:2">
+                                    <DoubleAnimation.EasingFunction>
+                                        <SineEase EasingMode="EaseInOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+            </Border>
+            
+            <!-- Content Stack -->
+            <StackPanel IsHitTestVisible="False">
+                <!-- Header with Icon -->
+                <Grid Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- Gaming Icon -->
+                    <Border Grid.Column="0" Width="32" Height="32" CornerRadius="8"
+                            Background="{StaticResource OverlayAccent}"
+                            Margin="0,0,12,0"
+                            Effect="{StaticResource NeonGlow}">
+                        <TextBlock Text="🎮" FontSize="18" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"/>
+                    </Border>
+                    
+                    <!-- Title -->
+                    <TextBlock x:Name="TxtHeader" Grid.Column="1"
+                               Text="ARTHEMIS PRO • IN-GAME" 
+                               FontWeight="Bold" 
+                               FontSize="14"
+                               Foreground="{StaticResource OverlayText}"
+                               VerticalAlignment="Center"
+                               Effect="{StaticResource NeonGlow}"/>
+                    
+                    <!-- Status Indicator -->
+                    <Ellipse Grid.Column="2" Width="12" Height="12"
+                             Fill="{StaticResource OverlayGold}"
+                             Effect="{StaticResource GoldGlow}">
+                        <Ellipse.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard RepeatBehavior="Forever">
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                       From="0.4" To="1.0" Duration="0:0:1"
+                                                       AutoReverse="True">
+                                            <DoubleAnimation.EasingFunction>
+                                                <SineEase EasingMode="EaseInOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Ellipse.Triggers>
+                    </Ellipse>
+                </Grid>
+                
+                <!-- Info Lines with Icons -->
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="⚡ " 
+                               Foreground="{StaticResource OverlayAccent}"
+                               FontSize="14" FontWeight="Bold"
+                               Margin="0,0,8,0"/>
+                    <TextBlock x:Name="TxtLine1" Grid.Column="1"
+                               Foreground="{StaticResource OverlayText}"
+                               FontSize="13" FontWeight="Medium"
+                               Text="Status: Active"/>
+                </Grid>
+                
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="🎯 " 
+                               Foreground="{StaticResource OverlayGold}"
+                               FontSize="14" FontWeight="Bold"
+                               Margin="0,0,8,0"/>
+                    <TextBlock x:Name="TxtLine2" Grid.Column="1"
+                               Foreground="{StaticResource OverlayAccent}"
+                               FontSize="13" FontWeight="SemiBold"
+                               Text="Profile: Default"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
     </Border>
 </Window>
