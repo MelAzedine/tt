@@ -380,7 +380,7 @@
             </Setter>
         </Style>
 
-        <!-- Style Modern Button with Animations -->
+        <!-- Style Modern Button with Animations and Ripple Effect -->
         <Style x:Key="ModernButton" TargetType="Button">
             <Setter Property="Background" Value="{StaticResource AccentRed}"/>
             <Setter Property="Foreground" Value="{StaticResource Fg}"/>
@@ -399,12 +399,34 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border x:Name="ButtonBorder"
-                                Background="{TemplateBinding Background}" 
-                                CornerRadius="10"
-                                Padding="{TemplateBinding Padding}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
+                        <Grid>
+                            <!-- Glow layer -->
+                            <Border x:Name="GlowBorder"
+                                    Background="Transparent"
+                                    BorderBrush="#FF4444"
+                                    BorderThickness="2"
+                                    CornerRadius="12"
+                                    Opacity="0">
+                                <Border.Effect>
+                                    <BlurEffect Radius="15"/>
+                                </Border.Effect>
+                            </Border>
+                            
+                            <!-- Main button -->
+                            <Border x:Name="ButtonBorder"
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="10"
+                                    Padding="{TemplateBinding Padding}">
+                                <Border.Effect>
+                                    <DropShadowEffect x:Name="ButtonShadow"
+                                                    Color="#FF4444" 
+                                                    BlurRadius="15" 
+                                                    Opacity="0.5" 
+                                                    ShadowDepth="0"/>
+                                </Border.Effect>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </Grid>
                         <ControlTemplate.Triggers>
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
@@ -412,21 +434,29 @@
                                         <ColorAnimation Storyboard.TargetName="ButtonBorder"
                                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
                                                       To="#FF6666"
-                                                      Duration="0:0:0.15">
+                                                      Duration="0:0:0.2">
                                             <ColorAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>
                                             </ColorAnimation.EasingFunction>
                                         </ColorAnimation>
+                                        <DoubleAnimation Storyboard.TargetName="GlowBorder"
+                                                       Storyboard.TargetProperty="Opacity"
+                                                       To="0.8"
+                                                       Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetName="ButtonShadow"
+                                                       Storyboard.TargetProperty="BlurRadius"
+                                                       To="25"
+                                                       Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                                                        To="1.05"
-                                                       Duration="0:0:0.15">
+                                                       Duration="0:0:0.2">
                                             <DoubleAnimation.EasingFunction>
                                                 <BackEase EasingMode="EaseOut" Amplitude="0.3"/>
                                             </DoubleAnimation.EasingFunction>
                                         </DoubleAnimation>
                                         <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
                                                        To="1.05"
-                                                       Duration="0:0:0.15">
+                                                       Duration="0:0:0.2">
                                             <DoubleAnimation.EasingFunction>
                                                 <BackEase EasingMode="EaseOut" Amplitude="0.3"/>
                                             </DoubleAnimation.EasingFunction>
@@ -440,14 +470,73 @@
                                         <ColorAnimation Storyboard.TargetName="ButtonBorder"
                                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
                                                       To="#FF4444"
-                                                      Duration="0:0:0.15">
+                                                      Duration="0:0:0.2">
                                             <ColorAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>
                                             </ColorAnimation.EasingFunction>
                                         </ColorAnimation>
+                                        <DoubleAnimation Storyboard.TargetName="GlowBorder"
+                                                       Storyboard.TargetProperty="Opacity"
+                                                       To="0"
+                                                       Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetName="ButtonShadow"
+                                                       Storyboard.TargetProperty="BlurRadius"
+                                                       To="15"
+                                                       Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                                                        To="1.0"
-                                                       Duration="0:0:0.15">
+                                                       Duration="0:0:0.2">
+                                            <DoubleAnimation.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                       To="1.0"
+                                                       Duration="0:0:0.2">
+                                            <DoubleAnimation.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="PreviewMouseDown">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                                       To="0.95"
+                                                       Duration="0:0:0.05"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                       To="0.95"
+                                                       Duration="0:0:0.05"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="PreviewMouseUp">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                                       To="1.05"
+                                                       Duration="0:0:0.1">
+                                            <DoubleAnimation.EasingFunction>
+                                                <ElasticEase EasingMode="EaseOut" Oscillations="1" Springiness="3"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                       To="1.05"
+                                                       Duration="0:0:0.1">
+                                            <DoubleAnimation.EasingFunction>
+                                                <ElasticEase EasingMode="EaseOut" Oscillations="1" Springiness="3"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
                                             <DoubleAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>
                                             </DoubleAnimation.EasingFunction>
@@ -599,6 +688,67 @@
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="{StaticResource Fg}"/>
             <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+        </Style>
+
+        <!-- Enhanced ToolTip Style -->
+        <Style TargetType="ToolTip">
+            <Setter Property="Background" Value="#2D333B"/>
+            <Setter Property="BorderBrush" Value="#FF4444"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{StaticResource Fg}"/>
+            <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="HasDropShadow" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToolTip">
+                        <Border x:Name="ToolTipBorder"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8"
+                                Padding="{TemplateBinding Padding}"
+                                RenderTransformOrigin="0.5,0.5">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#FF4444" BlurRadius="20" Opacity="0.6" ShadowDepth="0"/>
+                            </Border.Effect>
+                            <Border.RenderTransform>
+                                <ScaleTransform x:Name="ToolTipScale" ScaleX="0.9" ScaleY="0.9"/>
+                            </Border.RenderTransform>
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="ToolTipScale"
+                                                       Storyboard.TargetProperty="ScaleX"
+                                                       To="1.0"
+                                                       Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseOut" Amplitude="0.3"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                        <DoubleAnimation Storyboard.TargetName="ToolTipScale"
+                                                       Storyboard.TargetProperty="ScaleY"
+                                                       To="1.0"
+                                                       Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseOut" Amplitude="0.3"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                        <DoubleAnimation Storyboard.TargetName="ToolTipBorder"
+                                                       Storyboard.TargetProperty="Opacity"
+                                                       From="0" To="1"
+                                                       Duration="0:0:0.15"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <!-- Slider -->
