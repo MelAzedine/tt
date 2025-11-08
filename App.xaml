@@ -1,22 +1,170 @@
 <Application x:Class="Trident.MITM.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              ShutdownMode="OnExplicitShutdown">
 
     <Application.Resources>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- PROFESSIONAL GAMING UI - ARTHEMIS CONTROL PRO               -->
+        <!-- Modern Dark Theme with Neon Accents & Smooth Animations    -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
 
-        <SolidColorBrush x:Key="B_Bg0" Color="#12141A"/>
+        <!-- ═══ COLOR PALETTE ═══ -->
+        <SolidColorBrush x:Key="B_Bg0" Color="#0A0B10"/>
+        <SolidColorBrush x:Key="B_Bg1" Color="#12131A"/>
+        <SolidColorBrush x:Key="B_Bg2" Color="#1A1B24"/>
+        <SolidColorBrush x:Key="B_Card" Color="#1F2029"/>
+        <SolidColorBrush x:Key="B_CardHover" Color="#252632"/>
+        <SolidColorBrush x:Key="B_Stroke" Color="#2A2B38"/>
+        
+        <!-- Neon Accents -->
+        <SolidColorBrush x:Key="B_AccentRed" Color="#FF3366"/>
+        <SolidColorBrush x:Key="B_AccentCyan" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="B_AccentPurple" Color="#B24DFF"/>
+        <SolidColorBrush x:Key="B_AccentGold" Color="#FFD700"/>
+        <SolidColorBrush x:Key="B_Accent" Color="#00D9FF"/>
+        
+        <!-- Text Colors -->
+        <SolidColorBrush x:Key="B_Fg" Color="#F2F7FF"/>
+        <SolidColorBrush x:Key="B_Sub" Color="#A0A8B8"/>
+        <SolidColorBrush x:Key="B_Muted" Color="#6B7280"/>
+        
+        <!-- Gradient Brushes -->
+        <LinearGradientBrush x:Key="B_GradientRed" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FF3366" Offset="0"/>
+            <GradientStop Color="#FF6B99" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Key="B_GradientCyan" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#00D9FF" Offset="0"/>
+            <GradientStop Color="#66E5FF" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <!-- ═══ EFFECTS ═══ -->
+        <DropShadowEffect x:Key="B_GlowRed" Color="#FF3366" BlurRadius="20" Opacity="0.8" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="B_GlowCyan" Color="#00D9FF" BlurRadius="20" Opacity="0.8" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="B_CardShadow" Color="#000000" BlurRadius="25" Opacity="0.6" ShadowDepth="0"/>
+        
+        <!-- ═══ PROFESSIONAL COMBOBOX ═══ -->
+        <Style x:Key="ProfessionalComboBox" TargetType="ComboBox">
+            <Setter Property="Background" Value="{StaticResource B_Bg2}"/>
+            <Setter Property="Foreground" Value="{StaticResource B_Fg}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource B_Stroke}"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="16,12"/>
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        
+        <!-- ═══ PROFESSIONAL SLIDER ═══ -->
+        <Style x:Key="ProfessionalSlider" TargetType="Slider">
+            <Setter Property="Height" Value="8"/>
+            <Setter Property="Margin" Value="12,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
 
-        <SolidColorBrush x:Key="B_Bg1" Color="#1B2030"/>
-
-        <SolidColorBrush x:Key="B_Stroke" Color="#2E3448"/>
-
-        <SolidColorBrush x:Key="B_Fg"  Color="#E6ECFF"/>
-    
-        <SolidColorBrush x:Key="B_Sub" Color="#8EA3C7"/>
-
-        <SolidColorBrush x:Key="B_Accent" Color="#4DA3FF"/>
- 
+        <!-- Localisation Strings -->
+        <system:String x:Key="Home">Home</system:String>
+        <system:String x:Key="Profiles">Profiles</system:String>
+        <system:String x:Key="Controller">Controller</system:String>
+        <system:String x:Key="KeyboardMouse">KB + Mouse</system:String>
+        <system:String x:Key="Settings">Settings</system:String>
+        <system:String x:Key="Optimization">Optimization</system:String>
+        <system:String x:Key="StatusON">ON</system:String>
+        <system:String x:Key="StatusOFF">OFF</system:String>
+        <system:String x:Key="ProfileMouseKeyboard">Profile: Mouse+Keyboard</system:String>
+        <system:String x:Key="SaveConfig">Save config</system:String>
+        <system:String x:Key="ProfessionalGamepadControl">Professional Gamepad Control</system:String>
+        <system:String x:Key="GameProfiles">GAME PROFILES</system:String>
+        <system:String x:Key="FeaturesAndModifications">FEATURES &amp; MODIFICATIONS</system:String>
+        <system:String x:Key="FortniteProfile">Fortnite - Optimized aim assist and build macros</system:String>
+        <system:String x:Key="CODProfile">Call of Duty - Anti-recoil and quick scope</system:String>
+        <system:String x:Key="WarzoneProfile">Warzone - Battle royale tuning with ping assist</system:String>
+        <system:String x:Key="BattlefieldProfile">Battlefield - Vehicle control and suppression</system:String>
+        <system:String x:Key="NoRecoil">Anti-Recoil</system:String>
+        <system:String x:Key="NoRecoilDescription">Compensates vertical and horizontal recoil</system:String>
+        <system:String x:Key="AimAssist">Aim Assist</system:String>
+        <system:String x:Key="AimAssistDescription">Advanced target tracking (3 modes)</system:String>
+        <system:String x:Key="RapidFire">Rapid Fire</system:String>
+        <system:String x:Key="RapidFireDescription">Configurable fire rate modifier</system:String>
+        <system:String x:Key="AutoPing">Auto-Ping</system:String>
+        <system:String x:Key="AutoPingDescription">Automatic enemy marking system</system:String>
+        <system:String x:Key="GeneralSettings">GENERAL SETTINGS</system:String>
+        <system:String x:Key="Language">Language</system:String>
+        <system:String x:Key="StartWithWindows">Start with Windows</system:String>
+        <system:String x:Key="StartWithWindowsDesc">Launch app on system startup</system:String>
+        <system:String x:Key="MinimizeToTray">Minimize to Tray</system:String>
+        <system:String x:Key="MinimizeToTrayDesc">Hide window when minimized</system:String>
+        <system:String x:Key="ProcessPriority">Process Priority</system:String>
+        <system:String x:Key="Normal">Normal</system:String>
+        <system:String x:Key="High">High</system:String>
+        <system:String x:Key="Realtime">Realtime</system:String>
+        <system:String x:Key="Security">SECURITY</system:String>
+        <system:String x:Key="HideInTaskbar">Hide in Taskbar</system:String>
+        <system:String x:Key="HideInTaskbarDesc">Hide application from taskbar</system:String>
+        <system:String x:Key="DisableGlobalHotkeys">Disable Global Hotkeys</system:String>
+        <system:String x:Key="DisableGlobalHotkeysDesc">Disable keyboard shortcuts</system:String>
+        <system:String x:Key="SaveSettings">Save Settings</system:String>
+        <system:String x:Key="ResetSettings">Reset Settings</system:String>
+        <system:String x:Key="OptimizationTitle">SYSTEM OPTIMIZATION</system:String>
+        <system:String x:Key="Network">NETWORK</system:String>
+        <system:String x:Key="OptimizeNetworkLatency">Optimize Network Latency</system:String>
+        <system:String x:Key="OptimizeNetworkLatencyDesc">Reduces network latency for gaming</system:String>
+        <system:String x:Key="DisableNagle">Disable Nagle's Algorithm</system:String>
+        <system:String x:Key="DisableNagleDesc">Reduces TCP packet delay</system:String>
+        <system:String x:Key="HighNetworkPriority">High Network Priority</system:String>
+        <system:String x:Key="HighNetworkPriorityDesc">Prioritize network traffic</system:String>
+        <system:String x:Key="NetworkQoS">Network QoS</system:String>
+        <system:String x:Key="Disabled">Disabled</system:String>
+        <system:String x:Key="Low">Low</system:String>
+        <system:String x:Key="Medium">Medium</system:String>
+        <system:String x:Key="OptimizeDNS">Optimize DNS</system:String>
+        <system:String x:Key="OptimizeDNSDesc">Use fastest DNS servers</system:String>
+        <system:String x:Key="DisableP2PUpdate">Disable P2P Updates</system:String>
+        <system:String x:Key="DisableP2PUpdateDesc">Disable Windows Update P2P</system:String>
+        <system:String x:Key="DisableNetworkServices">Disable Network Services</system:String>
+        <system:String x:Key="DisableNetworkServicesDesc">Disable unused network services</system:String>
+        <system:String x:Key="NetworkBuffer">Network Buffer Size</system:String>
+        <system:String x:Key="Auto">Auto</system:String>
+        <system:String x:Key="InputLag">INPUT LAG</system:String>
+        <system:String x:Key="DisableVSync">Disable V-Sync</system:String>
+        <system:String x:Key="DisableVSyncDesc">Disable vertical synchronization</system:String>
+        <system:String x:Key="EnableGameMode">Enable Game Mode</system:String>
+        <system:String x:Key="EnableGameModeDesc">Windows 10/11 Game Mode</system:String>
+        <system:String x:Key="DisableFullscreenOpt">Disable Fullscreen Optimization</system:String>
+        <system:String x:Key="DisableFullscreenOptDesc">Legacy fullscreen mode</system:String>
+        <system:String x:Key="TimerResolution">Timer Resolution</system:String>
+        <system:String x:Key="Recommended">Recommended</system:String>
+        <system:String x:Key="Default">Default</system:String>
+        <system:String x:Key="DisableMouseAccel">Disable Mouse Acceleration</system:String>
+        <system:String x:Key="DisableMouseAccelDesc">Raw mouse input</system:String>
+        <system:String x:Key="DisableRawInputBuffer">Disable Raw Input Buffer</system:String>
+        <system:String x:Key="DisableRawInputBufferDesc">Reduces input buffering</system:String>
+        <system:String x:Key="HighInputThreadPriority">High Input Thread Priority</system:String>
+        <system:String x:Key="HighInputThreadPriorityDesc">Prioritize input processing</system:String>
+        <system:String x:Key="PollingRate">USB Polling Rate</system:String>
+        <system:String x:Key="GPU">GPU</system:String>
+        <system:String x:Key="CPU">CPU</system:String>
+        <system:String x:Key="System">SYSTEM</system:String>
+        <system:String x:Key="ApplyOptimizations">Apply Optimizations</system:String>
+        <system:String x:Key="License">License</system:String>
+        <system:String x:Key="AppName">Arthemis Control</system:String>
+        <system:String x:Key="Username">Username</system:String>
+        <system:String x:Key="Password">Password</system:String>
+        <system:String x:Key="LoginTitle">LOGIN</system:String>
+        <system:String x:Key="RegisterTitle">REGISTER</system:String>
+        <system:String x:Key="LoginButton">Login</system:String>
+        <system:String x:Key="RegisterButton">Register</system:String>
+        <system:String x:Key="Waiting">Please login or register...</system:String>
+        <system:String x:Key="SwitchToRegister">Don't have an account? Register here</system:String>
+        <system:String x:Key="SwitchToLogin">Already have an account? Login here</system:String>
+        <system:String x:Key="LicenseKey">License Key</system:String>
+        <system:String x:Key="ExpirationDate">Expiration Date</system:String>
+        <system:String x:Key="DaysRemaining">Days Remaining</system:String>
+        <system:String x:Key="Status">Status</system:String>
+        <system:String x:Key="Quit">Quit Application</system:String>
     </Application.Resources>
 
 
