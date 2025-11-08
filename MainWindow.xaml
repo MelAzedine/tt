@@ -751,14 +751,6 @@
             </Setter>
         </Style>
 
-        <!-- Slider -->
-        <Style TargetType="Slider">
-            <Setter Property="Margin" Value="10,0"/>
-            <Setter Property="Height" Value="8"/>
-            <Setter Property="Background" Value="{StaticResource Bg2}"/>
-            <Setter Property="Foreground" Value="{StaticResource AccentRed}"/>
-        </Style>
-
         <!-- ComboBox -->
         <Style TargetType="ComboBox">
             <Setter Property="Background" Value="{StaticResource Bg2}"/>
@@ -872,6 +864,210 @@
                     </Setter>
         </Style>
             </Style.Resources>
+        </Style>
+
+        <!-- Enhanced Slider Style -->
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="10,0"/>
+            <Setter Property="Height" Value="6"/>
+            <Setter Property="Background" Value="{StaticResource Bg2}"/>
+            <Setter Property="Foreground" Value="{StaticResource AccentRed}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Slider">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border x:Name="TrackBackground"
+                                    Grid.Row="1"
+                                    Height="6"
+                                    Background="{StaticResource Bg2}"
+                                    BorderBrush="{StaticResource Stroke}"
+                                    BorderThickness="1"
+                                    CornerRadius="3"/>
+                            <Track x:Name="PART_Track" Grid.Row="1">
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton Command="Slider.DecreaseLarge" Style="{StaticResource SliderRepeatButtonStyle}"/>
+                                </Track.DecreaseRepeatButton>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton Command="Slider.IncreaseLarge" Style="{StaticResource SliderRepeatButtonStyle}"/>
+                                </Track.IncreaseRepeatButton>
+                                <Track.Thumb>
+                                    <Thumb x:Name="Thumb" Width="20" Height="20">
+                                        <Thumb.Template>
+                                            <ControlTemplate>
+                                                <Grid>
+                                                    <!-- Outer glow -->
+                                                    <Ellipse x:Name="ThumbGlow"
+                                                            Width="24" Height="24"
+                                                            Fill="Transparent"
+                                                            Stroke="#FF4444"
+                                                            StrokeThickness="2"
+                                                            Opacity="0">
+                                                        <Ellipse.Effect>
+                                                            <BlurEffect Radius="10"/>
+                                                        </Ellipse.Effect>
+                                                    </Ellipse>
+                                                    <!-- Main thumb -->
+                                                    <Ellipse Width="20" Height="20" 
+                                                            Fill="{StaticResource AccentRed}">
+                                                        <Ellipse.Effect>
+                                                            <DropShadowEffect Color="#FF4444" BlurRadius="10" Opacity="0.6" ShadowDepth="0"/>
+                                                        </Ellipse.Effect>
+                                                    </Ellipse>
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Trigger.EnterActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Storyboard.TargetName="ThumbGlow"
+                                                                                   Storyboard.TargetProperty="Opacity"
+                                                                                   To="0.8" Duration="0:0:0.2"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.EnterActions>
+                                                        <Trigger.ExitActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Storyboard.TargetName="ThumbGlow"
+                                                                                   Storyboard.TargetProperty="Opacity"
+                                                                                   To="0" Duration="0:0:0.2"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.ExitActions>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Slider Button Style -->
+        <Style x:Key="SliderRepeatButtonStyle" TargetType="RepeatButton">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="IsTabStop" Value="false"/>
+            <Setter Property="Focusable" Value="false"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RepeatButton">
+                        <Border Background="Transparent"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Enhanced ScrollViewer Style -->
+        <Style TargetType="ScrollViewer">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollViewer">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <ScrollContentPresenter Grid.Column="0" Grid.Row="0"/>
+                            
+                            <ScrollBar x:Name="PART_VerticalScrollBar"
+                                      Grid.Column="1"
+                                      Value="{TemplateBinding VerticalOffset}"
+                                      Maximum="{TemplateBinding ScrollableHeight}"
+                                      ViewportSize="{TemplateBinding ViewportHeight}"
+                                      Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                            
+                            <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                      Orientation="Horizontal"
+                                      Grid.Row="1"
+                                      Grid.Column="0"
+                                      Value="{TemplateBinding HorizontalOffset}"
+                                      Maximum="{TemplateBinding ScrollableWidth}"
+                                      ViewportSize="{TemplateBinding ViewportWidth}"
+                                      Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Enhanced ScrollBar Style -->
+        <Style TargetType="ScrollBar">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollBar">
+                        <Grid>
+                            <Border Background="{StaticResource Bg1}" CornerRadius="4" Opacity="0.3"/>
+                            <Track x:Name="PART_Track" IsDirectionReversed="True">
+                                <Track.Thumb>
+                                    <Thumb>
+                                        <Thumb.Template>
+                                            <ControlTemplate>
+                                                <Border x:Name="ThumbBorder"
+                                                       Background="{StaticResource AccentRed}"
+                                                       CornerRadius="4"
+                                                       Opacity="0.6">
+                                                    <Border.Effect>
+                                                        <DropShadowEffect x:Name="ThumbGlow"
+                                                                        Color="#FF4444" 
+                                                                        BlurRadius="8" 
+                                                                        Opacity="0" 
+                                                                        ShadowDepth="0"/>
+                                                    </Border.Effect>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Trigger.EnterActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Storyboard.TargetName="ThumbBorder"
+                                                                                   Storyboard.TargetProperty="Opacity"
+                                                                                   To="1.0" Duration="0:0:0.15"/>
+                                                                    <DoubleAnimation Storyboard.TargetName="ThumbGlow"
+                                                                                   Storyboard.TargetProperty="Opacity"
+                                                                                   To="0.8" Duration="0:0:0.15"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.EnterActions>
+                                                        <Trigger.ExitActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Storyboard.TargetName="ThumbBorder"
+                                                                                   Storyboard.TargetProperty="Opacity"
+                                                                                   To="0.6" Duration="0:0:0.15"/>
+                                                                    <DoubleAnimation Storyboard.TargetName="ThumbGlow"
+                                                                                   Storyboard.TargetProperty="Opacity"
+                                                                                   To="0" Duration="0:0:0.15"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.ExitActions>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
