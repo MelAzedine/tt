@@ -5,24 +5,24 @@
         Title="Advanced Features - Arthemis Control PRO" 
         Height="800" Width="1200"
         WindowStartupLocation="CenterScreen"
-        Background="#0D1117"
+        Background="#0A0E1A"
         WindowStyle="None" 
         AllowsTransparency="True"
         MouseDown="Window_MouseDown">
 
     <Window.Resources>
         <!-- Colors -->
-        <SolidColorBrush x:Key="Bg0" Color="#0D1117"/>
-        <SolidColorBrush x:Key="Bg1" Color="#161B22"/>
-        <SolidColorBrush x:Key="Bg2" Color="#1C2128"/>
-        <SolidColorBrush x:Key="Card" Color="#21262D"/>
-        <SolidColorBrush x:Key="Stroke" Color="#30363D"/>
-        <SolidColorBrush x:Key="AccentRed" Color="#FF4444"/>
-        <SolidColorBrush x:Key="Fg" Color="#F0F6FC"/>
-        <SolidColorBrush x:Key="FgSecondary" Color="#B8BCC0"/>
+        <SolidColorBrush x:Key="Bg0" Color="#0A0E1A"/>
+        <SolidColorBrush x:Key="Bg1" Color="#111827"/>
+        <SolidColorBrush x:Key="Bg2" Color="#1F2937"/>
+        <SolidColorBrush x:Key="Card" Color="#1E293B"/>
+        <SolidColorBrush x:Key="Stroke" Color="#475569"/>
+        <SolidColorBrush x:Key="AccentRed" Color="#A855F7"/>
+        <SolidColorBrush x:Key="Fg" Color="#F1F5F9"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#94A3B8"/>
         
         <!-- Effects -->
-        <DropShadowEffect x:Key="RedGlow" Color="#FF4444" BlurRadius="20" Opacity="0.6" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="RedGlow" Color="#A855F7" BlurRadius="20" Opacity="0.6" ShadowDepth="0"/>
         <DropShadowEffect x:Key="CardShadow" Color="#000000" BlurRadius="15" Opacity="0.4" ShadowDepth="0"/>
 
         <!-- Button Style -->
@@ -50,7 +50,7 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#2D333B"/>
+                    <Setter Property="Background" Value="#334155"/>
                     <Setter Property="BorderBrush" Value="{StaticResource AccentRed}"/>
                 </Trigger>
             </Style.Triggers>
@@ -62,7 +62,7 @@
             <Setter Property="Foreground" Value="White"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FF6666"/>
+                    <Setter Property="Background" Value="#C084FC"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -118,7 +118,7 @@
                                             <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
                                         </Trigger>
                                         <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="Border" Property="Background" Value="#2D333B"/>
+                                            <Setter TargetName="Border" Property="Background" Value="#334155"/>
                                         </Trigger>
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
