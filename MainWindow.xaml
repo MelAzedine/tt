@@ -556,35 +556,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-                                            <DoubleAnimation.EasingFunction>
-                                                <CubicEase EasingMode="EaseOut"/>
-                                            </DoubleAnimation.EasingFunction>
-                                        </DoubleAnimation>
-                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
-                                                       To="1.0"
-                                                       Duration="0:0:0.15">
-                                            <DoubleAnimation.EasingFunction>
-                                                <CubicEase EasingMode="EaseOut"/>
-                                            </DoubleAnimation.EasingFunction>
-                                        </DoubleAnimation>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="ButtonBorder" Property="Effect" Value="{StaticResource PurpleGlow}"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="RenderTransform">
-                                    <Setter.Value>
-                                        <ScaleTransform ScaleX="0.98" ScaleY="0.98"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
 
         <!-- Style Tab Button with Enhanced Animations -->
         <Style x:Key="TabButton" TargetType="Button">
@@ -1105,12 +1076,12 @@
     <!-- Fond principal -->
     <Border BorderBrush="{StaticResource Stroke}" BorderThickness="1" CornerRadius="0" Background="{StaticResource Bg0}">
         <Border.Effect>
-            <DropShadowEffect BlurRadius="70" Opacity="0.7" ShadowDepth="0" Color="#A855F7"/>
+            <DropShadowEffect BlurRadius="70" Opacity="0.7" ShadowDepth="0" Color="#FF6B35"/>
         </Border.Effect>
 
-    <Grid>
-        <!-- Animated Background Layer -->
-        <Canvas x:Name="BackgroundCanvas" ClipToBounds="True">
+        <Grid>
+            <!-- Animated Background Layer -->
+            <Canvas x:Name="BackgroundCanvas" ClipToBounds="True">
             <!-- Particle 1 - Orange -->
             <Ellipse Width="160" Height="160" Fill="#18FF6B35" Canvas.Left="100" Canvas.Top="50">
                 <Ellipse.RenderTransform>
@@ -1240,8 +1211,8 @@
             </Ellipse>
         </Canvas>
         
-    <Grid>
-        <Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
                 <RowDefinition Height="60"/>
@@ -5070,8 +5041,9 @@
                             Style="{StaticResource ModernButton}"
                             HorizontalAlignment="Right"
                             Click="SaveState_Click"/>
-        </Grid>
+                </Grid>
             </Border>
+        </Grid>
     </Grid>
     </Border>
 </Window>
