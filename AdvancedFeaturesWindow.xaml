@@ -1,0 +1,527 @@
+<!-- AdvancedFeaturesWindow.xaml - Professional UI for Macros, Button Remapping, and Combos -->
+<Window x:Class="Trident.MITM.AdvancedFeaturesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Advanced Features - Arthemis Control PRO" 
+        Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#0D1117"
+        WindowStyle="None" 
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+    <Window.Resources>
+        <!-- Colors -->
+        <SolidColorBrush x:Key="Bg0" Color="#0D1117"/>
+        <SolidColorBrush x:Key="Bg1" Color="#161B22"/>
+        <SolidColorBrush x:Key="Bg2" Color="#1C2128"/>
+        <SolidColorBrush x:Key="Card" Color="#21262D"/>
+        <SolidColorBrush x:Key="Stroke" Color="#30363D"/>
+        <SolidColorBrush x:Key="AccentRed" Color="#FF4444"/>
+        <SolidColorBrush x:Key="Fg" Color="#F0F6FC"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#B8BCC0"/>
+        
+        <!-- Effects -->
+        <DropShadowEffect x:Key="RedGlow" Color="#FF4444" BlurRadius="20" Opacity="0.6" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="CardShadow" Color="#000000" BlurRadius="15" Opacity="0.4" ShadowDepth="0"/>
+
+        <!-- Button Style -->
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource Card}"/>
+            <Setter Property="Foreground" Value="{StaticResource Fg}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Stroke}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="6"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2D333B"/>
+                    <Setter Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Primary Button Style -->
+        <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+            <Setter Property="Background" Value="{StaticResource AccentRed}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF6666"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="{StaticResource Bg0}" BorderBrush="{StaticResource AccentRed}" BorderThickness="2" CornerRadius="12">
+        <Grid Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Bar -->
+            <Border Grid.Row="0" Background="{StaticResource Bg1}" CornerRadius="10,10,0,0">
+                <Grid>
+                    <TextBlock Text="🎮 ADVANCED FEATURES - PROFESSIONAL EDITION" 
+                               FontSize="18" FontWeight="Bold" 
+                               Foreground="{StaticResource Fg}"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left"
+                               Margin="25,0,0,0"
+                               Effect="{StaticResource RedGlow}"/>
+                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,15,0">
+                        <Button Content="—" Width="40" Height="30" 
+                                Style="{StaticResource ModernButton}"
+                                Click="MinimizeButton_Click" Margin="5,0"/>
+                        <Button Content="✕" Width="40" Height="30" 
+                                Style="{StaticResource ModernButton}"
+                                Click="CloseButton_Click" Margin="5,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Main Content -->
+            <TabControl Grid.Row="1" Margin="10" Background="Transparent" BorderThickness="0">
+                <TabControl.Resources>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Border Name="Border" Background="{StaticResource Card}" 
+                                            BorderBrush="{StaticResource Stroke}" 
+                                            BorderThickness="1" CornerRadius="8,8,0,0" 
+                                            Padding="20,10" Margin="2,0">
+                                        <ContentPresenter ContentSource="Header" 
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="{StaticResource Bg2}"/>
+                                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#2D333B"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Foreground" Value="{StaticResource Fg}"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="FontSize" Value="14"/>
+                    </Style>
+                </TabControl.Resources>
+
+                <!-- Macro Manager Tab -->
+                <TabItem Header="⚡ MACRO SYSTEM">
+                    <Grid Background="{StaticResource Bg2}" Margin="0,5,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Macro List -->
+                        <Border Grid.Column="0" Background="{StaticResource Card}" 
+                                BorderBrush="{StaticResource Stroke}" 
+                                BorderThickness="0,0,1,0" Padding="15">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Text="MACRO LIBRARY" 
+                                           FontSize="16" FontWeight="Bold" 
+                                           Foreground="{StaticResource AccentRed}"
+                                           Margin="0,0,0,15"/>
+
+                                <ListBox x:Name="MacroListBox" Grid.Row="1" 
+                                         Background="{StaticResource Bg1}"
+                                         BorderBrush="{StaticResource Stroke}"
+                                         Foreground="{StaticResource Fg}"
+                                         SelectionChanged="MacroListBox_SelectionChanged"
+                                         Margin="0,0,0,10"/>
+
+                                <StackPanel Grid.Row="2">
+                                    <Button Content="➕ NEW MACRO" 
+                                            Style="{StaticResource PrimaryButton}"
+                                            Click="NewMacro_Click" 
+                                            Margin="0,5"/>
+                                    <Button Content="🎬 START RECORDING" 
+                                            x:Name="RecordMacroButton"
+                                            Style="{StaticResource ModernButton}"
+                                            Click="RecordMacro_Click" 
+                                            Margin="0,5"/>
+                                    <Button Content="▶ PLAY MACRO" 
+                                            Style="{StaticResource ModernButton}"
+                                            Click="PlayMacro_Click" 
+                                            Margin="0,5"/>
+                                    <Button Content="🗑️ DELETE" 
+                                            Style="{StaticResource ModernButton}"
+                                            Click="DeleteMacro_Click" 
+                                            Margin="0,5"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <!-- Macro Details -->
+                        <Grid Grid.Column="1" Margin="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0">
+                                <TextBlock Text="MACRO DETAILS" 
+                                           FontSize="16" FontWeight="Bold" 
+                                           Foreground="{StaticResource AccentRed}"
+                                           Margin="0,0,0,15"/>
+                                
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" 
+                                               Foreground="{StaticResource FgSecondary}" 
+                                               Margin="0,5"/>
+                                    <TextBox x:Name="MacroNameTextBox" Grid.Row="0" Grid.Column="1" 
+                                             Margin="10,5,0,5" Padding="8"/>
+
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Description:" 
+                                               Foreground="{StaticResource FgSecondary}" 
+                                               Margin="0,5"/>
+                                    <TextBox x:Name="MacroDescTextBox" Grid.Row="1" Grid.Column="1" 
+                                             Margin="10,5,0,5" Padding="8"/>
+
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Loop Count:" 
+                                               Foreground="{StaticResource FgSecondary}" 
+                                               Margin="0,5"/>
+                                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="10,5,0,5">
+                                        <TextBox x:Name="MacroLoopCountTextBox" Width="60" Padding="8" Text="1"/>
+                                        <TextBlock Text="(0 = infinite)" 
+                                                   Foreground="{StaticResource FgSecondary}" 
+                                                   Margin="10,0" VerticalAlignment="Center"/>
+                                    </StackPanel>
+
+                                    <CheckBox x:Name="MacroLoopCheckBox" Grid.Row="3" Grid.Column="1" 
+                                              Content="Enable Looping" 
+                                              Foreground="{StaticResource Fg}"
+                                              Margin="10,5,0,5"/>
+                                </Grid>
+                            </StackPanel>
+
+                            <DataGrid x:Name="MacroActionsGrid" Grid.Row="1" 
+                                      Background="{StaticResource Bg1}"
+                                      Foreground="{StaticResource Fg}"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      Margin="0,15">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Button" Binding="{Binding ButtonName}" Width="*"/>
+                                    <DataGridTextColumn Header="Action" Binding="{Binding IsPress}" Width="100"/>
+                                    <DataGridTextColumn Header="Delay (ms)" Binding="{Binding DelayAfterMs}" Width="100"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Content="💾 SAVE CHANGES" 
+                                        Style="{StaticResource PrimaryButton}"
+                                        Click="SaveMacro_Click" 
+                                        Margin="5"/>
+                                <Button Content="📤 EXPORT" 
+                                        Style="{StaticResource ModernButton}"
+                                        Click="ExportMacro_Click" 
+                                        Margin="5"/>
+                                <Button Content="📥 IMPORT" 
+                                        Style="{StaticResource ModernButton}"
+                                        Click="ImportMacro_Click" 
+                                        Margin="5"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <!-- Button Remapping Tab -->
+                <TabItem Header="🎯 BUTTON REMAPPING">
+                    <Grid Background="{StaticResource Bg2}" Margin="0,5,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Profile List -->
+                        <Border Grid.Column="0" Background="{StaticResource Card}" 
+                                BorderBrush="{StaticResource Stroke}" 
+                                BorderThickness="0,0,1,0" Padding="15">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Text="PROFILES" 
+                                           FontSize="16" FontWeight="Bold" 
+                                           Foreground="{StaticResource AccentRed}"
+                                           Margin="0,0,0,15"/>
+
+                                <ListBox x:Name="ProfileListBox" Grid.Row="1" 
+                                         Background="{StaticResource Bg1}"
+                                         BorderBrush="{StaticResource Stroke}"
+                                         Foreground="{StaticResource Fg}"
+                                         SelectionChanged="ProfileListBox_SelectionChanged"
+                                         Margin="0,0,0,10"/>
+
+                                <StackPanel Grid.Row="2">
+                                    <Button Content="➕ NEW PROFILE" 
+                                            Style="{StaticResource PrimaryButton}"
+                                            Click="NewProfile_Click" 
+                                            Margin="0,5"/>
+                                    <Button Content="✓ ACTIVATE" 
+                                            Style="{StaticResource ModernButton}"
+                                            Click="ActivateProfile_Click" 
+                                            Margin="0,5"/>
+                                    <Button Content="🗑️ DELETE" 
+                                            Style="{StaticResource ModernButton}"
+                                            Click="DeleteProfile_Click" 
+                                            Margin="0,5"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <!-- Remapping Details -->
+                        <Grid Grid.Column="1" Margin="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0">
+                                <TextBlock Text="BUTTON MAPPINGS" 
+                                           FontSize="16" FontWeight="Bold" 
+                                           Foreground="{StaticResource AccentRed}"
+                                           Margin="0,0,0,15"/>
+                            </StackPanel>
+
+                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="ButtonMappingPanel"/>
+                            </ScrollViewer>
+
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Content="➕ ADD MAPPING" 
+                                        Style="{StaticResource PrimaryButton}"
+                                        Click="AddMapping_Click" 
+                                        Margin="5"/>
+                                <Button Content="💾 SAVE PROFILE" 
+                                        Style="{StaticResource ModernButton}"
+                                        Click="SaveProfile_Click" 
+                                        Margin="5"/>
+                                <Button Content="📤 EXPORT" 
+                                        Style="{StaticResource ModernButton}"
+                                        Click="ExportProfile_Click" 
+                                        Margin="5"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <!-- Combo System Tab -->
+                <TabItem Header="⚔️ COMBO SYSTEM">
+                    <Grid Background="{StaticResource Bg2}" Margin="0,5,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Combo List -->
+                        <Border Grid.Column="0" Background="{StaticResource Card}" 
+                                BorderBrush="{StaticResource Stroke}" 
+                                BorderThickness="0,0,1,0" Padding="15">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Text="COMBO LIBRARY" 
+                                           FontSize="16" FontWeight="Bold" 
+                                           Foreground="{StaticResource AccentRed}"
+                                           Margin="0,0,0,15"/>
+
+                                <ListBox x:Name="ComboListBox" Grid.Row="1" 
+                                         Background="{StaticResource Bg1}"
+                                         BorderBrush="{StaticResource Stroke}"
+                                         Foreground="{StaticResource Fg}"
+                                         SelectionChanged="ComboListBox_SelectionChanged"
+                                         Margin="0,0,0,10"/>
+
+                                <StackPanel Grid.Row="2">
+                                    <Button Content="➕ NEW COMBO" 
+                                            Style="{StaticResource PrimaryButton}"
+                                            Click="NewCombo_Click" 
+                                            Margin="0,5"/>
+                                    <Button Content="🎮 QUICK TAP" 
+                                            Style="{StaticResource ModernButton}"
+                                            Click="QuickTapCombo_Click" 
+                                            Margin="0,5"/>
+                                    <Button Content="🗑️ DELETE" 
+                                            Style="{StaticResource ModernButton}"
+                                            Click="DeleteCombo_Click" 
+                                            Margin="0,5"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <!-- Combo Details -->
+                        <Grid Grid.Column="1" Margin="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0">
+                                <TextBlock Text="COMBO CONFIGURATION" 
+                                           FontSize="16" FontWeight="Bold" 
+                                           Foreground="{StaticResource AccentRed}"
+                                           Margin="0,0,0,15"/>
+                                
+                                <TextBlock x:Name="ComboStatusText" 
+                                           Text="Select a combo to view details" 
+                                           Foreground="{StaticResource FgSecondary}"
+                                           FontStyle="Italic"
+                                           Margin="0,0,0,10"/>
+                            </StackPanel>
+
+                            <DataGrid x:Name="ComboInputsGrid" Grid.Row="1" 
+                                      Background="{StaticResource Bg1}"
+                                      Foreground="{StaticResource Fg}"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      Margin="0,15">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Step" Width="60"/>
+                                    <DataGridTextColumn Header="Button" Binding="{Binding ButtonName}" Width="*"/>
+                                    <DataGridTextColumn Header="Action" Binding="{Binding RequirePress}" Width="100"/>
+                                    <DataGridTextColumn Header="Max Delay (ms)" Binding="{Binding MaxDelayMs}" Width="120"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Content="💾 SAVE COMBO" 
+                                        Style="{StaticResource PrimaryButton}"
+                                        Click="SaveCombo_Click" 
+                                        Margin="5"/>
+                                <Button Content="📤 EXPORT ALL" 
+                                        Style="{StaticResource ModernButton}"
+                                        Click="ExportCombos_Click" 
+                                        Margin="5"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <!-- Statistics Tab -->
+                <TabItem Header="📊 STATISTICS">
+                    <Grid Background="{StaticResource Bg2}" Margin="0,5,0,0" Padding="20">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel>
+                                <TextBlock Text="USAGE STATISTICS" 
+                                           FontSize="20" FontWeight="Bold" 
+                                           Foreground="{StaticResource AccentRed}"
+                                           Margin="0,0,0,20"/>
+
+                                <Border Background="{StaticResource Card}" 
+                                        BorderBrush="{StaticResource Stroke}" 
+                                        BorderThickness="1" CornerRadius="8" 
+                                        Padding="20" Margin="0,0,0,15">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="MACROS" 
+                                                       FontSize="14" FontWeight="Bold" 
+                                                       Foreground="{StaticResource FgSecondary}"/>
+                                            <TextBlock x:Name="MacroCountText" 
+                                                       Text="0 Total" 
+                                                       FontSize="24" FontWeight="Bold" 
+                                                       Foreground="{StaticResource Fg}"
+                                                       Margin="0,10,0,0"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="PROFILES" 
+                                                       FontSize="14" FontWeight="Bold" 
+                                                       Foreground="{StaticResource FgSecondary}"/>
+                                            <TextBlock x:Name="ProfileCountText" 
+                                                       Text="0 Total" 
+                                                       FontSize="24" FontWeight="Bold" 
+                                                       Foreground="{StaticResource Fg}"
+                                                       Margin="0,10,0,0"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <TextBlock Text="COMBOS" 
+                                                       FontSize="14" FontWeight="Bold" 
+                                                       Foreground="{StaticResource FgSecondary}"/>
+                                            <TextBlock x:Name="ComboCountText" 
+                                                       Text="0 Total" 
+                                                       FontSize="24" FontWeight="Bold" 
+                                                       Foreground="{StaticResource Fg}"
+                                                       Margin="0,10,0,0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+
+                                <TextBlock Text="Most Used Features" 
+                                           FontSize="16" FontWeight="Bold" 
+                                           Foreground="{StaticResource Fg}"
+                                           Margin="0,20,0,10"/>
+                                
+                                <ListBox x:Name="StatsListBox" 
+                                         Background="{StaticResource Card}"
+                                         BorderBrush="{StaticResource Stroke}"
+                                         Foreground="{StaticResource Fg}"
+                                         MinHeight="200"/>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Border>
+</Window>
