@@ -1,0 +1,217 @@
+# License Agreement
+
+## ARTHEMIS CONTROL - Professional Gamepad Control System
+
+**Copyright © 2024 MelAzedine. All Rights Reserved.**
+
+---
+
+## PROPRIETARY SOFTWARE LICENSE
+
+This software is proprietary and requires a valid license key to operate. By using this software, you agree to the following terms:
+
+### 1. License Grant
+
+Subject to payment of applicable license fees and compliance with this agreement, you are granted a limited, non-exclusive, non-transferable license to:
+
+- Install and use the software on devices you own or control
+- Create and use profiles and configurations
+- Receive updates during your license period
+
+### 2. Restrictions
+
+You may NOT:
+
+- ❌ Reverse engineer, decompile, or disassemble the software
+- ❌ Remove or modify any proprietary notices or labels
+- ❌ Rent, lease, lend, sell, or sublicense the software
+- ❌ Use the software for commercial purposes without explicit permission
+- ❌ Share your license key with others
+- ❌ Create derivative works based on the software
+- ❌ Use the software to violate any game's Terms of Service
+- ❌ Use the software in competitive or professional gaming without checking game rules
+
+### 3. Ownership
+
+- The software is licensed, not sold
+- All rights, title, and interest in the software remain with the copyright holder
+- You own the data and profiles you create
+
+### 4. License Types
+
+**Personal License**
+- For individual, non-commercial use
+- Single user, multiple devices
+- Standard updates and support
+
+**Professional License**
+- For professional gamers and content creators
+- Priority support
+- Early access to features
+- Commercial use permitted
+
+**Team License**
+- For gaming teams and organizations
+- Multiple users
+- Centralized management
+- Custom integrations available
+
+### 5. Term and Termination
+
+- License is valid for the purchased period
+- Renewable annually or perpetual (depending on purchase)
+- Automatic termination if terms are violated
+- Upon termination, you must cease use and destroy all copies
+
+### 6. Updates and Support
+
+- Updates provided during active license period
+- Support provided via email and Discord
+- No guaranteed response time for free licenses
+- Priority support for premium licenses
+
+### 7. Warranty Disclaimer
+
+```
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+THE COPYRIGHT HOLDER DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR
+REQUIREMENTS OR THAT OPERATION WILL BE UNINTERRUPTED OR ERROR-FREE.
+```
+
+### 8. Limitation of Liability
+
+```
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY SPECIAL, INCIDENTAL,
+INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION,
+DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS
+INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR
+INABILITY TO USE THIS SOFTWARE.
+```
+
+### 9. Game Terms of Service
+
+**IMPORTANT**: 
+
+You are solely responsible for ensuring your use of this software complies with:
+- The Terms of Service of games you play
+- Anti-cheat policies
+- Competitive gaming rules
+- Local laws and regulations
+
+The copyright holder is NOT responsible for:
+- Account bans or suspensions
+- Tournament disqualifications
+- Violation of game rules
+- Legal consequences of misuse
+
+### 10. Permitted Use
+
+This software is designed for:
+- ✅ Accessibility and comfort improvements
+- ✅ Controller customization and mapping
+- ✅ Dead zone adjustment
+- ✅ Response curve tuning
+- ✅ Single-player gaming enhancement
+- ✅ Training and practice modes
+
+Use responsibly and ethically. Do not use in ways that:
+- ❌ Provide unfair competitive advantage
+- ❌ Violate anti-cheat systems
+- ❌ Harm the gaming experience of others
+- ❌ Bypass intended game mechanics
+
+### 11. Privacy and Data
+
+- No personal data is collected without consent
+- No telemetry sent to external servers
+- All processing is local to your device
+- License validation requires internet connection
+- Configuration files stored locally
+
+### 12. Third-Party Software
+
+This software includes components from:
+
+- **ViGEm Bus Driver** (MIT License)
+- **HidSharp** (Apache 2.0 License)
+- **SharpDX** (MIT License)
+- **Nefarius.ViGEm.Client** (MIT License)
+
+See respective licenses for these components.
+
+### 13. Governing Law
+
+This license agreement is governed by the laws of France, without regard to conflicts of law principles.
+
+### 14. Changes to License
+
+The copyright holder reserves the right to modify this license agreement. Continued use after modifications constitutes acceptance of new terms.
+
+### 15. Contact
+
+For license inquiries, contact:
+- **Email**: license@arthemiscontrol.com
+- **Website**: https://arthemiscontrol.com
+- **Discord**: https://discord.gg/arthemis
+
+---
+
+## Third-Party Licenses
+
+### ViGEm Bus Driver
+```
+MIT License
+Copyright (c) Nefarius Software Solutions e.U.
+```
+
+### HidSharp
+```
+Apache License 2.0
+Copyright James F. Bellinger
+```
+
+### SharpDX
+```
+MIT License
+Copyright (c) 2010-2014 SharpDX
+```
+
+### Nefarius.ViGEm.Client
+```
+MIT License
+Copyright (c) Nefarius Software Solutions e.U.
+```
+
+---
+
+## Open Source Components
+
+While the main software is proprietary, we use and appreciate open source components. Full license texts for third-party components can be found in the `Licenses` folder.
+
+---
+
+## Acknowledgments
+
+Special thanks to:
+- ViGEm project for virtual controller framework
+- Open source community for tools and libraries
+- Beta testers for feedback and testing
+- Gaming community for support
+
+---
+
+**Last Updated**: January 15, 2024  
+**Version**: 6.0.3
+
+---
+
+<div align="center">
+
+© 2024 MelAzedine. All Rights Reserved.
+
+**ARTHEMIS CONTROL** is a trademark of MelAzedine.
+
+</div>
