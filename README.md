@@ -6,7 +6,7 @@
 
 **Professional Gamepad Control System**
 
-[![Version](https://img.shields.io/badge/version-6.0.6-red.svg)](https://github.com/MelAzedine/tt)
+[![Version](https://img.shields.io/badge/version-6.0.7-red.svg)](https://github.com/MelAzedine/tt)
 [![License](https://img.shields.io/badge/license-PRO-red.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](https://www.microsoft.com/windows)
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
@@ -15,7 +15,9 @@
 
 > 🚀 **New User?** Start with our [Quick Start Guide](QUICKSTART.md) to get running in 5 minutes!
 > 
-> 🔥 **NEW in v6.0.6**: IA Adaptative, Commandes Vocales, Crosshair Dynamique, Enregistrement de Sessions! [RÉVOLUTIONNAIRE](REVOLUTIONARY_FEATURES.md)
+> 🔥 **NEW in v6.0.7**: 3 Nouvelles IA Avancées - Prédictive, Anti-Cheat, Smart Auto-Aim! [ADVANCED AI](ADVANCED_AI_IDEAS.md)
+> 
+> 🎯 **v6.0.6**: IA Adaptative, Commandes Vocales, Crosshair Dynamique, Sessions! [Révolutionnaire](REVOLUTIONARY_FEATURES.md)
 
 [Quick Start](QUICKSTART.md) • [Features](#-features) • [Revolutionary Features](REVOLUTIONARY_FEATURES.md) • [Installation](INSTALLATION.md) • [User Guide](USER_GUIDE.md)
 
@@ -24,6 +26,28 @@
 ---
 
 ## 🌟 Features
+
+### 🧠 ULTRA-AVANCÉ: Nouvelles IA (v6.0.7)
+**3 systèmes d'IA de niveau professionnel:**
+- 🔮 **IA Prédictive de Mouvement**: Apprend vos patterns et prédit vos actions
+  - Détection de séquences répétées
+  - Prédiction de prochaine action
+  - Optimisation automatique par contexte
+  - Suggestions de macros intelligentes
+- 🛡️ **IA Anti-Détection (Anti-Cheat)**: Naturalise vos inputs automatiquement
+  - Score de naturalité en temps réel (0-100%)
+  - Détection de patterns suspects
+  - Ajout de bruit humain automatique
+  - Micro-mouvements réalistes
+  - Variation de timing intelligente
+- 🎯 **Smart Auto-Aim IA**: Aim assist adaptatif ultra-intelligent
+  - Ajustement par distance + vitesse cible
+  - Profils d'armes (AR, Sniper, SMG, Shotgun)
+  - Lead automatique (vise devant les cibles)
+  - Prédiction de position
+  - Adaptation par type de cible (Player, Boss, Vehicle)
+
+👉 **[Guide Complet des IA Avancées](ADVANCED_AI_IDEAS.md)**
 
 ### 🔥 RÉVOLUTIONNAIRES: Fonctionnalités IA et Intelligentes (v6.0.6)
 **Transformez votre expérience de jeu avec l'IA:**
