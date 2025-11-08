@@ -15,28 +15,48 @@
         <!-- Police d'écriture moderne -->
         <FontFamily x:Key="AppFont">Segoe UI Variable</FontFamily>
         
-        <!-- Palette Gaming Rouge -->
-        <SolidColorBrush x:Key="Bg0" Color="#0D1117"/>
-        <SolidColorBrush x:Key="Bg1" Color="#161B22"/>
-        <SolidColorBrush x:Key="Bg2" Color="#1C2128"/>
-        <SolidColorBrush x:Key="Card" Color="#21262D"/>
-        <SolidColorBrush x:Key="CardHover" Color="#2D333B"/>
-        <SolidColorBrush x:Key="Stroke" Color="#30363D"/>
-        <SolidColorBrush x:Key="AccentRed" Color="#FF4444"/>
-        <SolidColorBrush x:Key="AccentRedBright" Color="#FF6666"/>
-        <SolidColorBrush x:Key="AccentRedDark" Color="#CC0000"/>
-        <SolidColorBrush x:Key="AccentCyan" Color="#FF6666"/>
-        <SolidColorBrush x:Key="Fg" Color="#F0F6FC"/>
-        <SolidColorBrush x:Key="FgSecondary" Color="#B8BCC0"/>
-        <SolidColorBrush x:Key="Success" Color="#FF4444"/>
-        <SolidColorBrush x:Key="Error" Color="#FF3333"/>
+        <!-- NOUVELLE PALETTE PRO - Purple/Cyan Gaming Theme -->
+        <SolidColorBrush x:Key="Bg0" Color="#0A0E1A"/>
+        <SolidColorBrush x:Key="Bg1" Color="#111827"/>
+        <SolidColorBrush x:Key="Bg2" Color="#1F2937"/>
+        <SolidColorBrush x:Key="Card" Color="#1E293B"/>
+        <SolidColorBrush x:Key="CardHover" Color="#334155"/>
+        <SolidColorBrush x:Key="Stroke" Color="#475569"/>
+        <SolidColorBrush x:Key="AccentPurple" Color="#A855F7"/>
+        <SolidColorBrush x:Key="AccentPurpleBright" Color="#C084FC"/>
+        <SolidColorBrush x:Key="AccentPurpleDark" Color="#7C3AED"/>
+        <SolidColorBrush x:Key="AccentCyan" Color="#06B6D4"/>
+        <SolidColorBrush x:Key="AccentCyanBright" Color="#22D3EE"/>
+        <SolidColorBrush x:Key="AccentRed" Color="#A855F7"/>
+        <SolidColorBrush x:Key="AccentRedBright" Color="#C084FC"/>
+        <SolidColorBrush x:Key="AccentRedDark" Color="#7C3AED"/>
+        <SolidColorBrush x:Key="Fg" Color="#F1F5F9"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#94A3B8"/>
+        <SolidColorBrush x:Key="Success" Color="#10B981"/>
+        <SolidColorBrush x:Key="Error" Color="#EF4444"/>
+        
+        <!-- Gradients Pro -->
+        <LinearGradientBrush x:Key="GradientPurple" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#A855F7" Offset="0"/>
+            <GradientStop Color="#7C3AED" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="GradientCyan" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#06B6D4" Offset="0"/>
+            <GradientStop Color="#0891B2" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="GradientMixed" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#A855F7" Offset="0"/>
+            <GradientStop Color="#06B6D4" Offset="1"/>
+        </LinearGradientBrush>
 
-        <!-- Effets -->
-        <DropShadowEffect x:Key="RedGlow" Color="#FF4444" BlurRadius="25" Opacity="0.7" ShadowDepth="0"/>
-        <DropShadowEffect x:Key="CardShadow" Color="#000000" BlurRadius="20" Opacity="0.5" ShadowDepth="0"/>
-        <DropShadowEffect x:Key="RedGlowStrong" Color="#FF4444" BlurRadius="40" Opacity="0.9" ShadowDepth="0"/>
-        <DropShadowEffect x:Key="CyanGlow" Color="#00D9FF" BlurRadius="30" Opacity="0.6" ShadowDepth="0"/>
-        <BlurEffect x:Key="GlassBlur" Radius="10"/>
+        <!-- Effets Modernes -->
+        <DropShadowEffect x:Key="PurpleGlow" Color="#A855F7" BlurRadius="30" Opacity="0.8" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="CardShadow" Color="#000000" BlurRadius="25" Opacity="0.6" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="PurpleGlowStrong" Color="#A855F7" BlurRadius="45" Opacity="1.0" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="CyanGlow" Color="#06B6D4" BlurRadius="35" Opacity="0.7" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="RedGlow" Color="#A855F7" BlurRadius="30" Opacity="0.8" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="RedGlowStrong" Color="#A855F7" BlurRadius="45" Opacity="1.0" ShadowDepth="0"/>
+        <BlurEffect x:Key="GlassBlur" Radius="12"/>
         
         <!-- Storyboard pour animation de pulsation -->
         <Storyboard x:Key="PulseAnimation" RepeatBehavior="Forever" AutoReverse="True">
@@ -48,16 +68,17 @@
             </DoubleAnimation>
         </Storyboard>
         
-        <!-- Animation RGB Border -->
+        <!-- Animation RGB Border - Nouvelle Palette -->
         <Storyboard x:Key="RGBAnimation" RepeatBehavior="Forever">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Color" Duration="0:0:6">
-                <LinearColorKeyFrame Value="#FF4444" KeyTime="0:0:0"/>
-                <LinearColorKeyFrame Value="#FF6B00" KeyTime="0:0:1"/>
-                <LinearColorKeyFrame Value="#FFD700" KeyTime="0:0:2"/>
-                <LinearColorKeyFrame Value="#00FF88" KeyTime="0:0:3"/>
-                <LinearColorKeyFrame Value="#00D9FF" KeyTime="0:0:4"/>
-                <LinearColorKeyFrame Value="#9D00FF" KeyTime="0:0:5"/>
-                <LinearColorKeyFrame Value="#FF4444" KeyTime="0:0:6"/>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Color" Duration="0:0:8">
+                <LinearColorKeyFrame Value="#A855F7" KeyTime="0:0:0"/>
+                <LinearColorKeyFrame Value="#C084FC" KeyTime="0:0:1"/>
+                <LinearColorKeyFrame Value="#06B6D4" KeyTime="0:0:2"/>
+                <LinearColorKeyFrame Value="#22D3EE" KeyTime="0:0:3"/>
+                <LinearColorKeyFrame Value="#10B981" KeyTime="0:0:4"/>
+                <LinearColorKeyFrame Value="#34D399" KeyTime="0:0:5"/>
+                <LinearColorKeyFrame Value="#C084FC" KeyTime="0:0:6"/>
+                <LinearColorKeyFrame Value="#A855F7" KeyTime="0:0:8"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
@@ -80,21 +101,21 @@
                             <!-- Outer glow layer -->
                             <Border x:Name="outerGlow"
                                     Background="Transparent"
-                                    BorderBrush="#FF4444"
+                                    BorderBrush="#A855F7"
                                     BorderThickness="2"
-                                    CornerRadius="18"
+                                    CornerRadius="20"
                                     Opacity="0">
                                 <Border.Effect>
-                                    <BlurEffect Radius="20"/>
+                                    <BlurEffect Radius="25"/>
                                 </Border.Effect>
                             </Border>
                             
                             <!-- Main card with glassmorphism -->
                             <Border x:Name="border"
-                                    Background="#25262D" 
+                                    Background="#1E293B" 
                                     BorderBrush="{StaticResource Stroke}"
                                     BorderThickness="2"
-                                    CornerRadius="16"
+                                    CornerRadius="18"
                                     Effect="{StaticResource CardShadow}">
                                 <Border.OpacityMask>
                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -107,13 +128,13 @@
                             
                             <!-- Shimmer overlay effect -->
                             <Border x:Name="shimmer"
-                                    CornerRadius="16"
+                                    CornerRadius="18"
                                     IsHitTestVisible="False"
                                     Opacity="0">
                                 <Border.Background>
                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                                         <GradientStop Color="Transparent" Offset="0"/>
-                                        <GradientStop Color="#30FF4444" Offset="0.5"/>
+                                        <GradientStop Color="#30A855F7" Offset="0.5"/>
                                         <GradientStop Color="Transparent" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
@@ -125,7 +146,7 @@
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetName="border"
                                                       Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                                      To="#FF4444"
+                                                      To="#A855F7"
                                                       Duration="0:0:0.3"/>
                                         <DoubleAnimation Storyboard.TargetName="outerGlow"
                                                        Storyboard.TargetProperty="Opacity"
@@ -157,7 +178,7 @@
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetName="border"
                                                       Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                                      To="#30363D"
+                                                      To="#475569"
                                                       Duration="0:0:0.3"/>
                                         <DoubleAnimation Storyboard.TargetName="outerGlow"
                                                        Storyboard.TargetProperty="Opacity"
@@ -187,7 +208,7 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border" Property="Background">
                                     <Setter.Value>
-                                        <SolidColorBrush Color="#2D333B"/>
+                                        <SolidColorBrush Color="#334155"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -210,19 +231,19 @@
                                     Width="56" 
                                     Height="32"
                                     Background="Transparent"
-                                    BorderBrush="#FF4444"
+                                    BorderBrush="#A855F7"
                                     BorderThickness="2"
                                     CornerRadius="16"
                                     Opacity="0">
                                 <Border.Effect>
-                                    <BlurEffect Radius="15"/>
+                                    <BlurEffect Radius="18"/>
                                 </Border.Effect>
                             </Border>
                             
                             <Border x:Name="ToggleBorder" 
                                     Width="52" 
                                     Height="28" 
-                                    Background="#30363D" 
+                                    Background="#475569" 
                                     CornerRadius="14">
                                 <Ellipse x:Name="ToggleCircle" 
                                          Width="22" 
@@ -250,7 +271,7 @@
                                         <Storyboard>
                                             <ColorAnimation Storyboard.TargetName="ToggleBorder"
                                                           Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                          To="#FF4444"
+                                                          To="#A855F7"
                                                           Duration="0:0:0.25">
                                                 <ColorAnimation.EasingFunction>
                                                     <CubicEase EasingMode="EaseOut"/>
@@ -266,7 +287,7 @@
                                             </DoubleAnimation>
                                             <ColorAnimation Storyboard.TargetName="CircleShadow"
                                                           Storyboard.TargetProperty="Color"
-                                                          To="#FF4444"
+                                                          To="#A855F7"
                                                           Duration="0:0:0.25"/>
                                             <DoubleAnimation Storyboard.TargetName="PulseGlow"
                                                            Storyboard.TargetProperty="Opacity"
@@ -291,7 +312,7 @@
                                         <Storyboard>
                                             <ColorAnimation Storyboard.TargetName="ToggleBorder"
                                                           Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                          To="#30363D"
+                                                          To="#475569"
                                                           Duration="0:0:0.25">
                                                 <ColorAnimation.EasingFunction>
                                                     <CubicEase EasingMode="EaseOut"/>
@@ -316,7 +337,7 @@
                                     </BeginStoryboard>
                                     <StopStoryboard BeginStoryboardName="PulseStoryboard"/>
                                 </Trigger.ExitActions>
-                                <Setter TargetName="ToggleBorder" Property="Effect" Value="{StaticResource RedGlow}"/>
+                                <Setter TargetName="ToggleBorder" Property="Effect" Value="{StaticResource PurpleGlow}"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -331,7 +352,7 @@
                     <ControlTemplate TargetType="ToggleButton">
                         <Border x:Name="border" 
                                 Background="{StaticResource Stroke}" 
-                                BorderBrush="{StaticResource AccentRed}" 
+                                BorderBrush="{StaticResource AccentPurple}" 
                                 BorderThickness="2" 
                                 CornerRadius="17">
                             <Grid>
@@ -369,7 +390,7 @@
                                         </Storyboard>
                                     </BeginStoryboard>
                                 </Trigger.ExitActions>
-                                <Setter TargetName="border" Property="Background" Value="{StaticResource AccentRed}"/>
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource AccentPurple}"/>
                             </Trigger>
                             <Trigger Property="IsChecked" Value="False">
                                 <Setter TargetName="border" Property="Background" Value="{StaticResource Stroke}"/>
@@ -382,10 +403,10 @@
 
         <!-- Style Modern Button with Animations and Ripple Effect -->
         <Style x:Key="ModernButton" TargetType="Button">
-            <Setter Property="Background" Value="{StaticResource AccentRed}"/>
+            <Setter Property="Background" Value="{StaticResource AccentPurple}"/>
             <Setter Property="Foreground" Value="{StaticResource Fg}"/>
             <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="20,12"/>
+            <Setter Property="Padding" Value="24,14"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
@@ -403,25 +424,25 @@
                             <!-- Glow layer -->
                             <Border x:Name="GlowBorder"
                                     Background="Transparent"
-                                    BorderBrush="#FF4444"
+                                    BorderBrush="#A855F7"
                                     BorderThickness="2"
-                                    CornerRadius="12"
+                                    CornerRadius="14"
                                     Opacity="0">
                                 <Border.Effect>
-                                    <BlurEffect Radius="15"/>
+                                    <BlurEffect Radius="18"/>
                                 </Border.Effect>
                             </Border>
                             
                             <!-- Main button -->
                             <Border x:Name="ButtonBorder"
                                     Background="{TemplateBinding Background}" 
-                                    CornerRadius="10"
+                                    CornerRadius="12"
                                     Padding="{TemplateBinding Padding}">
                                 <Border.Effect>
                                     <DropShadowEffect x:Name="ButtonShadow"
-                                                    Color="#FF4444" 
-                                                    BlurRadius="15" 
-                                                    Opacity="0.5" 
+                                                    Color="#A855F7" 
+                                                    BlurRadius="18" 
+                                                    Opacity="0.6" 
                                                     ShadowDepth="0"/>
                                 </Border.Effect>
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -433,7 +454,7 @@
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetName="ButtonBorder"
                                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                      To="#FF6666"
+                                                      To="#C084FC"
                                                       Duration="0:0:0.2">
                                             <ColorAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>
@@ -441,11 +462,11 @@
                                         </ColorAnimation>
                                         <DoubleAnimation Storyboard.TargetName="GlowBorder"
                                                        Storyboard.TargetProperty="Opacity"
-                                                       To="0.8"
+                                                       To="0.9"
                                                        Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetName="ButtonShadow"
                                                        Storyboard.TargetProperty="BlurRadius"
-                                                       To="25"
+                                                       To="28"
                                                        Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                                                        To="1.05"
@@ -469,7 +490,7 @@
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetName="ButtonBorder"
                                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                      To="#FF4444"
+                                                      To="#A855F7"
                                                       Duration="0:0:0.2">
                                             <ColorAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>
@@ -481,7 +502,7 @@
                                                        Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetName="ButtonShadow"
                                                        Storyboard.TargetProperty="BlurRadius"
-                                                       To="15"
+                                                       To="18"
                                                        Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                                                        To="1.0"
@@ -552,7 +573,7 @@
                                 </BeginStoryboard>
                             </EventTrigger>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="ButtonBorder" Property="Effect" Value="{StaticResource RedGlow}"/>
+                                <Setter TargetName="ButtonBorder" Property="Effect" Value="{StaticResource PurpleGlow}"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter Property="RenderTransform">
@@ -589,7 +610,7 @@
                             <!-- Animated underline -->
                             <Border x:Name="underline"
                                     Height="3"
-                                    Background="{StaticResource AccentRed}"
+                                    Background="{StaticResource AccentPurple}"
                                     VerticalAlignment="Bottom"
                                     CornerRadius="2,2,0,0"
                                     Opacity="0"
@@ -598,7 +619,7 @@
                                     <ScaleTransform ScaleX="0" ScaleY="1"/>
                                 </Border.RenderTransform>
                                 <Border.Effect>
-                                    <DropShadowEffect Color="#FF4444" BlurRadius="10" Opacity="0.8" ShadowDepth="0"/>
+                                    <DropShadowEffect Color="#A855F7" BlurRadius="12" Opacity="0.9" ShadowDepth="0"/>
                                 </Border.Effect>
                             </Border>
                         </Grid>
@@ -607,7 +628,7 @@
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
-                                                      To="#FF6666"
+                                                      To="#C084FC"
                                                       Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetName="underline"
                                                        Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
@@ -628,7 +649,7 @@
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
-                                                      To="#B8BCC0"
+                                                      To="#94A3B8"
                                                       Duration="0:0:0.2"/>
                                         <DoubleAnimation Storyboard.TargetName="underline"
                                                        Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
@@ -642,7 +663,7 @@
                                 </BeginStoryboard>
                             </EventTrigger>
                             <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}}" Value="Active">
-                                <Setter Property="Foreground" Value="{StaticResource AccentRedBright}"/>
+                                <Setter Property="Foreground" Value="{StaticResource AccentPurpleBright}"/>
                                 <DataTrigger.EnterActions>
                                     <BeginStoryboard>
                                         <Storyboard>
@@ -692,13 +713,13 @@
 
         <!-- Enhanced ToolTip Style -->
         <Style TargetType="ToolTip">
-            <Setter Property="Background" Value="#2D333B"/>
-            <Setter Property="BorderBrush" Value="#FF4444"/>
+            <Setter Property="Background" Value="#334155"/>
+            <Setter Property="BorderBrush" Value="#A855F7"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Foreground" Value="{StaticResource Fg}"/>
             <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
             <Setter Property="FontSize" Value="12"/>
-            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="Padding" Value="14,9"/>
             <Setter Property="HasDropShadow" Value="True"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -707,11 +728,11 @@
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="8"
+                                CornerRadius="10"
                                 Padding="{TemplateBinding Padding}"
                                 RenderTransformOrigin="0.5,0.5">
                             <Border.Effect>
-                                <DropShadowEffect Color="#FF4444" BlurRadius="20" Opacity="0.6" ShadowDepth="0"/>
+                                <DropShadowEffect Color="#A855F7" BlurRadius="22" Opacity="0.7" ShadowDepth="0"/>
                             </Border.Effect>
                             <Border.RenderTransform>
                                 <ScaleTransform x:Name="ToolTipScale" ScaleX="0.9" ScaleY="0.9"/>
@@ -853,7 +874,7 @@
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsHighlighted" Value="true">
                                         <Setter TargetName="Bd" Property="Background" Value="{StaticResource CardHover}"/>
-                                        <Setter Property="Foreground" Value="{StaticResource AccentRed}"/>
+                                        <Setter Property="Foreground" Value="{StaticResource AccentPurple}"/>
                                     </Trigger>
                                     <Trigger Property="IsEnabled" Value="false">
                                         <Setter Property="Foreground" Value="{StaticResource FgSecondary}"/>
@@ -904,18 +925,18 @@
                                                     <Ellipse x:Name="ThumbGlow"
                                                             Width="24" Height="24"
                                                             Fill="Transparent"
-                                                            Stroke="#FF4444"
+                                                            Stroke="#A855F7"
                                                             StrokeThickness="2"
                                                             Opacity="0">
                                                         <Ellipse.Effect>
-                                                            <BlurEffect Radius="10"/>
+                                                            <BlurEffect Radius="12"/>
                                                         </Ellipse.Effect>
                                                     </Ellipse>
                                                     <!-- Main thumb -->
                                                     <Ellipse Width="20" Height="20" 
-                                                            Fill="{StaticResource AccentRed}">
+                                                            Fill="{StaticResource AccentPurple}">
                                                         <Ellipse.Effect>
-                                                            <DropShadowEffect Color="#FF4444" BlurRadius="10" Opacity="0.6" ShadowDepth="0"/>
+                                                            <DropShadowEffect Color="#A855F7" BlurRadius="12" Opacity="0.7" ShadowDepth="0"/>
                                                         </Ellipse.Effect>
                                                     </Ellipse>
                                                 </Grid>
@@ -1020,13 +1041,13 @@
                                         <Thumb.Template>
                                             <ControlTemplate>
                                                 <Border x:Name="ThumbBorder"
-                                                       Background="{StaticResource AccentRed}"
+                                                       Background="{StaticResource AccentPurple}"
                                                        CornerRadius="4"
-                                                       Opacity="0.6">
+                                                       Opacity="0.7">
                                                     <Border.Effect>
                                                         <DropShadowEffect x:Name="ThumbGlow"
-                                                                        Color="#FF4444" 
-                                                                        BlurRadius="8" 
+                                                                        Color="#A855F7" 
+                                                                        BlurRadius="10" 
                                                                         Opacity="0" 
                                                                         ShadowDepth="0"/>
                                                     </Border.Effect>
@@ -1041,7 +1062,7 @@
                                                                                    To="1.0" Duration="0:0:0.15"/>
                                                                     <DoubleAnimation Storyboard.TargetName="ThumbGlow"
                                                                                    Storyboard.TargetProperty="Opacity"
-                                                                                   To="0.8" Duration="0:0:0.15"/>
+                                                                                   To="0.9" Duration="0:0:0.15"/>
                                                                 </Storyboard>
                                                             </BeginStoryboard>
                                                         </Trigger.EnterActions>
@@ -1050,7 +1071,7 @@
                                                                 <Storyboard>
                                                                     <DoubleAnimation Storyboard.TargetName="ThumbBorder"
                                                                                    Storyboard.TargetProperty="Opacity"
-                                                                                   To="0.6" Duration="0:0:0.15"/>
+                                                                                   To="0.7" Duration="0:0:0.15"/>
                                                                     <DoubleAnimation Storyboard.TargetName="ThumbGlow"
                                                                                    Storyboard.TargetProperty="Opacity"
                                                                                    To="0" Duration="0:0:0.15"/>
@@ -1076,19 +1097,19 @@
     <!-- Fond principal -->
     <Border BorderBrush="{StaticResource Stroke}" BorderThickness="1" CornerRadius="0" Background="{StaticResource Bg0}">
         <Border.Effect>
-            <DropShadowEffect BlurRadius="60" Opacity="0.6" ShadowDepth="0" Color="#FF4444"/>
+            <DropShadowEffect BlurRadius="70" Opacity="0.7" ShadowDepth="0" Color="#A855F7"/>
         </Border.Effect>
 
     <Grid>
         <!-- Animated Background Layer -->
         <Canvas x:Name="BackgroundCanvas" ClipToBounds="True">
-            <!-- Particle 1 -->
-            <Ellipse Width="120" Height="120" Fill="#15FF4444" Canvas.Left="100" Canvas.Top="50">
+            <!-- Particle 1 - Purple -->
+            <Ellipse Width="140" Height="140" Fill="#18A855F7" Canvas.Left="100" Canvas.Top="50">
                 <Ellipse.RenderTransform>
                     <TranslateTransform x:Name="Particle1Transform"/>
                 </Ellipse.RenderTransform>
                 <Ellipse.Effect>
-                    <BlurEffect Radius="40"/>
+                    <BlurEffect Radius="45"/>
                 </Ellipse.Effect>
                 <Ellipse.Triggers>
                     <EventTrigger RoutedEvent="Loaded">
@@ -1114,13 +1135,13 @@
                 </Ellipse.Triggers>
             </Ellipse>
             
-            <!-- Particle 2 -->
-            <Ellipse Width="150" Height="150" Fill="#1200D9FF" Canvas.Left="900" Canvas.Top="600">
+            <!-- Particle 2 - Cyan -->
+            <Ellipse Width="170" Height="170" Fill="#1506B6D4" Canvas.Left="900" Canvas.Top="600">
                 <Ellipse.RenderTransform>
                     <TranslateTransform x:Name="Particle2Transform"/>
                 </Ellipse.RenderTransform>
                 <Ellipse.Effect>
-                    <BlurEffect Radius="50"/>
+                    <BlurEffect Radius="55"/>
                 </Ellipse.Effect>
                 <Ellipse.Triggers>
                     <EventTrigger RoutedEvent="Loaded">
@@ -1146,13 +1167,13 @@
                 </Ellipse.Triggers>
             </Ellipse>
             
-            <!-- Particle 3 -->
-            <Ellipse Width="100" Height="100" Fill="#189D00FF" Canvas.Left="1400" Canvas.Top="300">
+            <!-- Particle 3 - Light Purple -->
+            <Ellipse Width="120" Height="120" Fill="#18C084FC" Canvas.Left="1400" Canvas.Top="300">
                 <Ellipse.RenderTransform>
                     <TranslateTransform x:Name="Particle3Transform"/>
                 </Ellipse.RenderTransform>
                 <Ellipse.Effect>
-                    <BlurEffect Radius="35"/>
+                    <BlurEffect Radius="40"/>
                 </Ellipse.Effect>
                 <Ellipse.Triggers>
                     <EventTrigger RoutedEvent="Loaded">
@@ -1178,13 +1199,13 @@
                 </Ellipse.Triggers>
             </Ellipse>
             
-            <!-- Particle 4 -->
-            <Ellipse Width="80" Height="80" Fill="#15FFD700" Canvas.Left="500" Canvas.Top="750">
-                <Ellipse.RenderTransform>
+            <!-- Particle 4 - Green Accent -->
+            <Ellipse Width="90" Height="90" Fill="#1510B981" Canvas.Left="500" Canvas.Top="750">
+                <Ellipse.RenderTransform">
                     <TranslateTransform x:Name="Particle4Transform"/>
                 </Ellipse.RenderTransform>
                 <Ellipse.Effect>
-                    <BlurEffect Radius="30"/>
+                    <BlurEffect Radius="35"/>
                 </Ellipse.Effect>
                 <Ellipse.Triggers>
                     <EventTrigger RoutedEvent="Loaded">
@@ -1232,15 +1253,15 @@
                         <Grid>
                             <!-- RGB animated border -->
                             <Border x:Name="LogoRGBBorder"
-                                    CornerRadius="12" 
+                                    CornerRadius="14" 
                                     Padding="2"
                                     Background="Transparent"
                                     BorderThickness="2">
                                 <Border.BorderBrush>
-                                    <SolidColorBrush x:Name="LogoRGBBrush" Color="#FF4444"/>
+                                    <SolidColorBrush x:Name="LogoRGBBrush" Color="#A855F7"/>
                                 </Border.BorderBrush>
                                 <Border.Effect>
-                                    <DropShadowEffect Color="#FF4444" BlurRadius="20" Opacity="0.6" ShadowDepth="0"/>
+                                    <DropShadowEffect Color="#A855F7" BlurRadius="24" Opacity="0.7" ShadowDepth="0"/>
                                 </Border.Effect>
                                 <Border.Triggers>
                                     <EventTrigger RoutedEvent="Loaded">
@@ -1248,39 +1269,40 @@
                                             <Storyboard RepeatBehavior="Forever">
                                                 <ColorAnimationUsingKeyFrames Storyboard.TargetName="LogoRGBBrush" 
                                                                             Storyboard.TargetProperty="Color" 
-                                                                            Duration="0:0:8">
-                                                    <LinearColorKeyFrame Value="#FF4444" KeyTime="0:0:0"/>
-                                                    <LinearColorKeyFrame Value="#FF6B00" KeyTime="0:0:1.33"/>
-                                                    <LinearColorKeyFrame Value="#FFD700" KeyTime="0:0:2.66"/>
-                                                    <LinearColorKeyFrame Value="#00FF88" KeyTime="0:0:4"/>
-                                                    <LinearColorKeyFrame Value="#00D9FF" KeyTime="0:0:5.33"/>
-                                                    <LinearColorKeyFrame Value="#9D00FF" KeyTime="0:0:6.66"/>
-                                                    <LinearColorKeyFrame Value="#FF4444" KeyTime="0:0:8"/>
+                                                                            Duration="0:0:10">
+                                                    <LinearColorKeyFrame Value="#A855F7" KeyTime="0:0:0"/>
+                                                    <LinearColorKeyFrame Value="#C084FC" KeyTime="0:0:1.66"/>
+                                                    <LinearColorKeyFrame Value="#06B6D4" KeyTime="0:0:3.33"/>
+                                                    <LinearColorKeyFrame Value="#22D3EE" KeyTime="0:0:5"/>
+                                                    <LinearColorKeyFrame Value="#10B981" KeyTime="0:0:6.66"/>
+                                                    <LinearColorKeyFrame Value="#C084FC" KeyTime="0:0:8.33"/>
+                                                    <LinearColorKeyFrame Value="#A855F7" KeyTime="0:0:10"/>
                                                 </ColorAnimationUsingKeyFrames>
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
                                 </Border.Triggers>
                                 
-                                <Border CornerRadius="10" Background="{StaticResource Bg2}" Padding="10">
+                                <Border CornerRadius="12" Background="{StaticResource Bg2}" Padding="12">
                                     <Image Source="pack://application:,,,/Trident.MITM.App;component/Assets/LOGO.png" 
-                                           Height="40" Width="40" Stretch="Uniform"/>
+                                           Height="42" Width="42" Stretch="Uniform"/>
                                 </Border>
                             </Border>
                         </Grid>
                         
-                        <StackPanel VerticalAlignment="Center" Margin="15,0,0,0">
+                        <StackPanel VerticalAlignment="Center" Margin="18,0,0,0">
                             <TextBlock Text="ARTHEMIS CONTROL" 
-                                       FontSize="20" 
+                                       FontSize="22" 
                                        FontWeight="Bold" 
                                        Foreground="{StaticResource Fg}">
                                 <TextBlock.Effect>
-                                    <DropShadowEffect Color="#FF4444" BlurRadius="10" Opacity="0.4" ShadowDepth="0"/>
+                                    <DropShadowEffect Color="#A855F7" BlurRadius="12" Opacity="0.5" ShadowDepth="0"/>
                                 </TextBlock.Effect>
                             </TextBlock>
                             <TextBlock Text="{DynamicResource ProfessionalGamepadControl}" 
                                        Foreground="{StaticResource FgSecondary}" 
-                                       FontSize="10"/>
+                                       FontSize="11"
+                                       Margin="0,2,0,0"/>
                         </StackPanel>
                     </StackPanel>
 
@@ -1298,21 +1320,22 @@
 
                     <!-- Version -->
                     <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
-                        <Border Background="#FF4444" 
-                                CornerRadius="6" 
-                                Padding="8,4"
-                                Margin="0,0,8,0">
+                        <Border Background="{StaticResource GradientPurple}" 
+                                CornerRadius="8" 
+                                Padding="10,5"
+                                Margin="0,0,10,0">
                             <Border.Effect>
-                                <DropShadowEffect Color="#FF4444" BlurRadius="15" Opacity="0.8" ShadowDepth="0"/>
+                                <DropShadowEffect Color="#A855F7" BlurRadius="18" Opacity="0.9" ShadowDepth="0"/>
                             </Border.Effect>
                             <TextBlock Text="PRO" 
                                        Foreground="White" 
                                        FontWeight="Bold" 
-                                       FontSize="12"/>
+                                       FontSize="13"/>
                         </Border>
-                        <TextBlock Text="6.0.4 BANGER" 
+                        <TextBlock Text="6.0.4 ULTIMATE" 
                                    Foreground="{StaticResource FgSecondary}" 
                                    FontSize="12"
+                                   FontWeight="SemiBold"
                                    VerticalAlignment="Center"/>
                 </StackPanel>
             </Grid>
@@ -4942,22 +4965,25 @@
                             Grid.Column="0" 
                             Background="{StaticResource Error}" 
                             Foreground="{StaticResource Fg}"
-                            Padding="15,10"
+                            Padding="18,11"
                             FontWeight="Bold"
                             Click="StatusButton_Click"
                             Cursor="Hand">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border Background="{TemplateBinding Background}" 
-                                        CornerRadius="8"
+                                        CornerRadius="10"
                                         Padding="{TemplateBinding Padding}">
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="#EF4444" BlurRadius="15" Opacity="0.6" ShadowDepth="0"/>
+                                    </Border.Effect>
                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
                         <StackPanel Orientation="Horizontal">
-                            <Ellipse Width="8" Height="8" Fill="White" Margin="0,0,8,0"/>
-                            <TextBlock Text="{DynamicResource StatusOFF}"/>
+                            <Ellipse Width="9" Height="9" Fill="White" Margin="0,0,10,0"/>
+                            <TextBlock Text="{DynamicResource StatusOFF}" FontSize="13"/>
                         </StackPanel>
                     </Button>
 
@@ -4965,7 +4991,7 @@
                     <Button Grid.Column="1" 
                             Background="{StaticResource Bg2}" 
                             Foreground="{StaticResource FgSecondary}"
-                            Padding="15,10"
+                            Padding="18,11"
                             Margin="15,0,0,0"
                             HorizontalAlignment="Left"
                             Click="HotkeyButton_Click"
@@ -4973,13 +4999,13 @@
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border Background="{TemplateBinding Background}" 
-                                        CornerRadius="8"
+                                        CornerRadius="10"
                                         Padding="{TemplateBinding Padding}">
                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
-                        <TextBlock Text="F8"/>
+                        <TextBlock Text="F8" FontSize="13" FontWeight="SemiBold"/>
                     </Button>
 
                     <!-- Profile Label -->
