@@ -269,5 +269,22 @@ namespace Trident.MITM
             Log("Erreur : " + msg);
             Debug.WriteLine("[ToolsWindow] " + msg);
         }
+
+        private void CharacterGenerator_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var charGenWindow = new CharacterGeneratorWindow
+                {
+                    Owner = this
+                };
+                charGenWindow.ShowDialog();
+                Log("Générateur de personnage Call of Duty ouvert.");
+            }
+            catch (Exception ex)
+            {
+                Err("Ouverture du générateur : " + ex.Message);
+            }
+        }
     }
 }

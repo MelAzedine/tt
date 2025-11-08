@@ -1,0 +1,275 @@
+﻿<Window x:Class="Trident.MITM.CharacterGeneratorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Générateur de Personnage Call of Duty" Height="700" Width="900"
+        Background="{DynamicResource B_Bg0}"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <!-- Styles only; brushes come from App.xaml -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource B_Fg}"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="Background" Value="#FF4444"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+        <Style TargetType="Border">
+            <Setter Property="Background" Value="{DynamicResource B_Bg1}"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="BorderBrush" Value="#262933"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,4,0,8"/>
+            <Setter Property="Padding" Value="8,6"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- En-tête -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,12">
+            <Image Source="/Assets/TRIDENT.png" Height="64" Stretch="Uniform" DockPanel.Dock="Left"/>
+            <StackPanel Margin="12,0,0,0">
+                <TextBlock Text="🎮 Générateur de Personnage Call of Duty" FontSize="24" FontWeight="Bold"/>
+                <TextBlock Text="Créez votre soldat personnalisé avec armes, perks et statistiques"
+                           Foreground="{DynamicResource B_Sub}" FontSize="13"/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Contenu principal -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Colonne gauche -->
+                <StackPanel Grid.Column="0" Margin="0,0,8,0">
+                    
+                    <!-- Informations de base -->
+                    <Border>
+                        <StackPanel>
+                            <TextBlock Text="📋 Informations de Base" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+                            
+                            <TextBlock Text="Nom du personnage :"/>
+                            <TextBox x:Name="TxtCharacterName" Height="32" Margin="0,4,0,12" Padding="8"/>
+                            
+                            <TextBlock Text="Classe :"/>
+                            <ComboBox x:Name="CmbClass">
+                                <ComboBoxItem Content="Assault - Combattant de première ligne" IsSelected="True"/>
+                                <ComboBoxItem Content="Support - Spécialiste du soutien"/>
+                                <ComboBoxItem Content="Recon - Éclaireur et tireur d'élite"/>
+                                <ComboBoxItem Content="Engineer - Expert en explosifs"/>
+                            </ComboBox>
+                            
+                            <TextBlock Text="Rang :"/>
+                            <ComboBox x:Name="CmbRank">
+                                <ComboBoxItem Content="Recrue" IsSelected="True"/>
+                                <ComboBoxItem Content="Soldat"/>
+                                <ComboBoxItem Content="Caporal"/>
+                                <ComboBoxItem Content="Sergent"/>
+                                <ComboBoxItem Content="Lieutenant"/>
+                                <ComboBoxItem Content="Capitaine"/>
+                                <ComboBoxItem Content="Major"/>
+                                <ComboBoxItem Content="Colonel"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Armement -->
+                    <Border>
+                        <StackPanel>
+                            <TextBlock Text="🔫 Armement" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+                            
+                            <TextBlock Text="Arme principale :"/>
+                            <ComboBox x:Name="CmbPrimaryWeapon"/>
+                            
+                            <TextBlock Text="Arme secondaire :"/>
+                            <ComboBox x:Name="CmbSecondaryWeapon"/>
+                            
+                            <TextBlock Text="Équipement tactique :"/>
+                            <ComboBox x:Name="CmbTactical">
+                                <ComboBoxItem Content="Grenade Flash" IsSelected="True"/>
+                                <ComboBoxItem Content="Grenade Fumigène"/>
+                                <ComboBoxItem Content="Grenade Étourdissante"/>
+                                <ComboBoxItem Content="Capteur de proximité"/>
+                            </ComboBox>
+                            
+                            <TextBlock Text="Équipement létal :"/>
+                            <ComboBox x:Name="CmbLethal">
+                                <ComboBoxItem Content="Grenade à fragmentation" IsSelected="True"/>
+                                <ComboBoxItem Content="Semtex"/>
+                                <ComboBoxItem Content="C4"/>
+                                <ComboBoxItem Content="Mine claymore"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Statistiques -->
+                    <Border>
+                        <StackPanel>
+                            <TextBlock Text="📊 Statistiques" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Vitesse:" Width="80" Margin="0,4"/>
+                                <ProgressBar Grid.Row="0" Grid.Column="1" x:Name="BarSpeed" Height="20" Margin="4" Minimum="0" Maximum="100" Value="75"/>
+                                <TextBlock Grid.Row="0" Grid.Column="2" x:Name="TxtSpeed" Text="75" Width="30" TextAlignment="Right" Margin="0,4"/>
+                                
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Santé:" Width="80" Margin="0,4"/>
+                                <ProgressBar Grid.Row="1" Grid.Column="1" x:Name="BarHealth" Height="20" Margin="4" Minimum="0" Maximum="100" Value="85"/>
+                                <TextBlock Grid.Row="1" Grid.Column="2" x:Name="TxtHealth" Text="85" Width="30" TextAlignment="Right" Margin="0,4"/>
+                                
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Armure:" Width="80" Margin="0,4"/>
+                                <ProgressBar Grid.Row="2" Grid.Column="1" x:Name="BarArmor" Height="20" Margin="4" Minimum="0" Maximum="100" Value="60"/>
+                                <TextBlock Grid.Row="2" Grid.Column="2" x:Name="TxtArmor" Text="60" Width="30" TextAlignment="Right" Margin="0,4"/>
+                                
+                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Précision:" Width="80" Margin="0,4"/>
+                                <ProgressBar Grid.Row="3" Grid.Column="1" x:Name="BarAccuracy" Height="20" Margin="4" Minimum="0" Maximum="100" Value="70"/>
+                                <TextBlock Grid.Row="3" Grid.Column="2" x:Name="TxtAccuracy" Text="70" Width="30" TextAlignment="Right" Margin="0,4"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <!-- Colonne droite -->
+                <StackPanel Grid.Column="1" Margin="8,0,0,0">
+                    
+                    <!-- Perks / Avantages -->
+                    <Border>
+                        <StackPanel>
+                            <TextBlock Text="⭐ Perks / Avantages" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+                            
+                            <TextBlock Text="Perk 1 :"/>
+                            <ComboBox x:Name="CmbPerk1">
+                                <ComboBoxItem Content="Léger - Vitesse de mouvement +10%" IsSelected="True"/>
+                                <ComboBoxItem Content="Furtif - Invisible aux radars"/>
+                                <ComboBoxItem Content="Scavenger - Récupération de munitions"/>
+                                <ComboBoxItem Content="EOD - Résistance aux explosifs"/>
+                            </ComboBox>
+                            
+                            <TextBlock Text="Perk 2 :"/>
+                            <ComboBox x:Name="CmbPerk2">
+                                <ComboBoxItem Content="Ghost - Invisible aux UAV" IsSelected="True"/>
+                                <ComboBoxItem Content="Hardline - Séries moins coûteuses"/>
+                                <ComboBoxItem Content="Overkill - 2 armes principales"/>
+                                <ComboBoxItem Content="Restock - Régénération d'équipement"/>
+                            </ComboBox>
+                            
+                            <TextBlock Text="Perk 3 :"/>
+                            <ComboBox x:Name="CmbPerk3">
+                                <ComboBoxItem Content="Amplifié - Meilleure audition" IsSelected="True"/>
+                                <ComboBoxItem Content="Ninja - Déplacements silencieux"/>
+                                <ComboBoxItem Content="Spotter - Repérage d'ennemis"/>
+                                <ComboBoxItem Content="Battle Hardened - Résistance flash/stun"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Séries d'élimination -->
+                    <Border>
+                        <StackPanel>
+                            <TextBlock Text="🎯 Séries d'Élimination" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+                            
+                            <TextBlock Text="Série 1 (3 éliminations) :"/>
+                            <ComboBox x:Name="CmbKillstreak1">
+                                <ComboBoxItem Content="UAV - Radar aérien" IsSelected="True"/>
+                                <ComboBoxItem Content="Drone de reconnaissance"/>
+                                <ComboBoxItem Content="Bombe de groupe"/>
+                            </ComboBox>
+                            
+                            <TextBlock Text="Série 2 (5 éliminations) :"/>
+                            <ComboBox x:Name="CmbKillstreak2">
+                                <ComboBoxItem Content="Précision Aérienne" IsSelected="True"/>
+                                <ComboBoxItem Content="Tourelle sentinelle"/>
+                                <ComboBoxItem Content="Raid aérien"/>
+                            </ComboBox>
+                            
+                            <TextBlock Text="Série 3 (7 éliminations) :"/>
+                            <ComboBox x:Name="CmbKillstreak3">
+                                <ComboBoxItem Content="Hélicoptère de combat" IsSelected="True"/>
+                                <ComboBoxItem Content="Paquet de ravitaillement"/>
+                                <ComboBoxItem Content="Missile guidé"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Apparence -->
+                    <Border>
+                        <StackPanel>
+                            <TextBlock Text="👤 Apparence" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+                            
+                            <TextBlock Text="Tenue de camouflage :"/>
+                            <ComboBox x:Name="CmbCamo">
+                                <ComboBoxItem Content="Urbain - Gris/Noir" IsSelected="True"/>
+                                <ComboBoxItem Content="Forêt - Vert/Marron"/>
+                                <ComboBoxItem Content="Désert - Sable/Beige"/>
+                                <ComboBoxItem Content="Arctique - Blanc/Gris clair"/>
+                                <ComboBoxItem Content="Numérique - Pixel bleu"/>
+                            </ComboBox>
+                            
+                            <TextBlock Text="Insigne d'unité :"/>
+                            <ComboBox x:Name="CmbEmblem">
+                                <ComboBoxItem Content="🦅 Aigle de guerre" IsSelected="True"/>
+                                <ComboBoxItem Content="💀 Crâne tactique"/>
+                                <ComboBoxItem Content="⚡ Éclair"/>
+                                <ComboBoxItem Content="🎯 Cible"/>
+                                <ComboBoxItem Content="🔥 Flammes"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Aperçu -->
+                    <Border Background="#1a1d24">
+                        <StackPanel>
+                            <TextBlock Text="👁️ Aperçu du Personnage" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+                            <TextBlock x:Name="TxtPreview" TextWrapping="Wrap" Foreground="#94C3EA" 
+                                       Text="Générez un personnage pour voir l'aperçu..." Padding="8"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+
+        <!-- Boutons d'action -->
+        <Border Grid.Row="2" Margin="0,12,0,0" Background="Transparent" BorderThickness="0" Padding="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="BtnGenerate" Content="🎲 Générer Personnage Aléatoire" 
+                        Width="220" Height="40" Click="BtnGenerate_Click" FontSize="14"/>
+                <Button x:Name="BtnSave" Content="💾 Sauvegarder" 
+                        Width="140" Height="40" Click="BtnSave_Click" FontSize="14"/>
+                <Button x:Name="BtnExport" Content="📤 Exporter" 
+                        Width="140" Height="40" Click="BtnExport_Click" FontSize="14"/>
+                <Button x:Name="BtnClose" Content="✖️ Fermer" 
+                        Width="120" Height="40" Click="BtnClose_Click" 
+                        Background="#555" FontSize="14"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
