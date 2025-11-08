@@ -818,6 +818,20 @@ namespace Trident.MITM
             ShowTab("Profiles");
         }
         
+        // Open Advanced Features Window
+        private void OpenAdvancedFeatures_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OpenAdvancedFeaturesWindow();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening Advanced Features: {ex.Message}", "Error", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        
         // Appliquer les profils de jeu
         private void ApplyFortniteProfile_Click(object sender, RoutedEventArgs e)
         {
