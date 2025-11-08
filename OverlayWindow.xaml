@@ -6,29 +6,29 @@
         Topmost="True" ShowInTaskbar="False">
     
     <Window.Resources>
-        <!-- Gaming Overlay Colors -->
-        <SolidColorBrush x:Key="OverlayBg" Color="#DD0A0B10"/>
-        <SolidColorBrush x:Key="OverlayAccent" Color="#06B6D4"/>
-        <SolidColorBrush x:Key="OverlayText" Color="#F2F7FF"/>
-        <SolidColorBrush x:Key="OverlayGold" Color="#FFD700"/>
+        <!-- Gaming Overlay Colors - Ultra Modern -->
+        <SolidColorBrush x:Key="OverlayBg" Color="#DD0F1419"/>
+        <SolidColorBrush x:Key="OverlayAccent" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="OverlayText" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="OverlayGold" Color="#FF6B35"/>
         
         <!-- Neon Glow Effect -->
-        <DropShadowEffect x:Key="NeonGlow" Color="#06B6D4" BlurRadius="20" Opacity="0.9" ShadowDepth="0"/>
-        <DropShadowEffect x:Key="GoldGlow" Color="#FFD700" BlurRadius="15" Opacity="0.8" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="NeonGlow" Color="#00D9FF" BlurRadius="24" Opacity="1.0" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="GoldGlow" Color="#FF6B35" BlurRadius="18" Opacity="0.9" ShadowDepth="0"/>
     </Window.Resources>
     
     <!-- Glassmorphism Overlay with Neon Border -->
     <Border CornerRadius="16" Padding="20,16" BorderThickness="2" Opacity="0.95">
         <Border.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#DD0A0B10" Offset="0"/>
-                <GradientStop Color="#CC12131A" Offset="1"/>
+                <GradientStop Color="#DD0F1419" Offset="0"/>
+                <GradientStop Color="#CC1A1F2E" Offset="1"/>
             </LinearGradientBrush>
         </Border.Background>
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#06B6D4" Offset="0"/>
-                <GradientStop Color="#FF3366" Offset="1"/>
+                <GradientStop Color="#00D9FF" Offset="0"/>
+                <GradientStop Color="#FF6B35" Offset="1"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
         <Border.Effect>

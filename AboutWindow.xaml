@@ -11,24 +11,24 @@
         ResizeMode="NoResize">
 
     <Window.Resources>
-        <SolidColorBrush x:Key="Bg0" Color="#0A0E1A"/>
-        <SolidColorBrush x:Key="Bg1" Color="#111827"/>
-        <SolidColorBrush x:Key="Bg2" Color="#1F2937"/>
-        <SolidColorBrush x:Key="AccentPurple" Color="#A855F7"/>
-        <SolidColorBrush x:Key="AccentCyan" Color="#06B6D4"/>
-        <SolidColorBrush x:Key="Fg" Color="#F1F5F9"/>
-        <SolidColorBrush x:Key="FgSecondary" Color="#94A3B8"/>
-        <SolidColorBrush x:Key="Stroke" Color="#475569"/>
-        <DropShadowEffect x:Key="PurpleGlow" Color="#A855F7" BlurRadius="30" Opacity="0.8" ShadowDepth="0"/>
+        <SolidColorBrush x:Key="Bg0" Color="#0F1419"/>
+        <SolidColorBrush x:Key="Bg1" Color="#1A1F2E"/>
+        <SolidColorBrush x:Key="Bg2" Color="#242B3D"/>
+        <SolidColorBrush x:Key="AccentPurple" Color="#FF6B35"/>
+        <SolidColorBrush x:Key="AccentCyan" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="Fg" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#9BA3B4"/>
+        <SolidColorBrush x:Key="Stroke" Color="#3D4A5C"/>
+        <DropShadowEffect x:Key="PurpleGlow" Color="#FF6B35" BlurRadius="35" Opacity="0.9" ShadowDepth="0"/>
         <LinearGradientBrush x:Key="GradientPurple" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#A855F7" Offset="0"/>
-            <GradientStop Color="#7C3AED" Offset="1"/>
+            <GradientStop Color="#FF6B35" Offset="0"/>
+            <GradientStop Color="#E85A2B" Offset="1"/>
         </LinearGradientBrush>
     </Window.Resources>
 
     <Border BorderBrush="{StaticResource Stroke}" BorderThickness="2" CornerRadius="16">
         <Border.Effect>
-            <DropShadowEffect BlurRadius="50" Opacity="0.9" ShadowDepth="0" Color="#A855F7"/>
+            <DropShadowEffect BlurRadius="55" Opacity="1.0" ShadowDepth="0" Color="#FF6B35"/>
         </Border.Effect>
         
         <Grid>
