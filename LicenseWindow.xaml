@@ -13,27 +13,28 @@
         MouseDown="Window_MouseDown">
 
     <Window.Resources>
-        <!-- Palette premium identique à MainWindow -->
-        <SolidColorBrush x:Key="Bg0" Color="#0A0B0F"/>
-        <SolidColorBrush x:Key="Bg1" Color="#0F1116"/>
-        <SolidColorBrush x:Key="Bg2" Color="#151820"/>
-        <SolidColorBrush x:Key="Card" Color="#1A1D28"/>
-        <SolidColorBrush x:Key="CardHover" Color="#212530"/>
-        <SolidColorBrush x:Key="Stroke" Color="#2A2D3A"/>
-        <SolidColorBrush x:Key="AccentRed" Color="#FF3B4A"/>
-        <SolidColorBrush x:Key="AccentRedHover" Color="#FF4D5C"/>
-        <SolidColorBrush x:Key="AccentSilver" Color="#C0C8D0"/>
-        <SolidColorBrush x:Key="Fg" Color="#F5F7FA"/>
-        <SolidColorBrush x:Key="FgSecondary" Color="#8B95A8"/>
+        <!-- Palette premium purple/cyan -->
+        <SolidColorBrush x:Key="Bg0" Color="#0A0E1A"/>
+        <SolidColorBrush x:Key="Bg1" Color="#111827"/>
+        <SolidColorBrush x:Key="Bg2" Color="#1F2937"/>
+        <SolidColorBrush x:Key="Card" Color="#1E293B"/>
+        <SolidColorBrush x:Key="CardHover" Color="#334155"/>
+        <SolidColorBrush x:Key="Stroke" Color="#475569"/>
+        <SolidColorBrush x:Key="AccentPurple" Color="#A855F7"/>
+        <SolidColorBrush x:Key="AccentPurpleHover" Color="#C084FC"/>
+        <SolidColorBrush x:Key="AccentCyan" Color="#06B6D4"/>
+        <SolidColorBrush x:Key="AccentSilver" Color="#CBD5E1"/>
+        <SolidColorBrush x:Key="Fg" Color="#F1F5F9"/>
+        <SolidColorBrush x:Key="FgSecondary" Color="#94A3B8"/>
 
         <LinearGradientBrush x:Key="AccentGradient" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#FF3B4A" Offset="0"/>
-            <GradientStop Color="#FF5A6A" Offset="1"/>
+            <GradientStop Color="#A855F7" Offset="0"/>
+            <GradientStop Color="#7C3AED" Offset="1"/>
         </LinearGradientBrush>
 
         <LinearGradientBrush x:Key="CardGradient" StartPoint="0,0" EndPoint="0,1">
-            <GradientStop Color="#1A1D28" Offset="0"/>
-            <GradientStop Color="#151820" Offset="1"/>
+            <GradientStop Color="#1E293B" Offset="0"/>
+            <GradientStop Color="#1F2937" Offset="1"/>
         </LinearGradientBrush>
 
         <!-- Animation d'entrée -->
@@ -62,16 +63,16 @@
                                 CornerRadius="10" 
                                 SnapsToDevicePixels="True">
                             <Border.Effect>
-                                <DropShadowEffect BlurRadius="15" Opacity="0.4" ShadowDepth="0" Color="#FF3B4A"/>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.4" ShadowDepth="0" Color="#A855F7"/>
                             </Border.Effect>
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="24,0"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="{StaticResource AccentRedHover}"/>
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource AccentPurpleHover}"/>
                                 <Setter TargetName="border" Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect BlurRadius="20" Opacity="0.6" ShadowDepth="0" Color="#FF4D5C"/>
+                                        <DropShadowEffect BlurRadius="20" Opacity="0.6" ShadowDepth="0" Color="#C084FC"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -104,7 +105,7 @@
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="{StaticResource CardHover}"/>
-                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentPurple}"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -117,7 +118,7 @@
             <Setter Property="Background" Value="{StaticResource Bg2}"/>
             <Setter Property="Foreground" Value="{StaticResource Fg}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Stroke}"/>
-            <Setter Property="CaretBrush" Value="{StaticResource AccentRed}"/>
+            <Setter Property="CaretBrush" Value="{StaticResource AccentPurple}"/>
             <Setter Property="Padding" Value="16,12"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="FontSize" Value="14"/>
@@ -133,10 +134,10 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsFocused" Value="True">
-                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentPurple}"/>
                                 <Setter TargetName="border" Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#FF3B4A"/>
+                                        <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#A855F7"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -250,7 +251,7 @@
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsHighlighted" Value="true">
                                         <Setter TargetName="Bd" Property="Background" Value="{StaticResource CardHover}"/>
-                                        <Setter Property="Foreground" Value="{StaticResource AccentRed}"/>
+                                        <Setter Property="Foreground" Value="{StaticResource AccentPurple}"/>
                                     </Trigger>
                                     <Trigger Property="IsEnabled" Value="false">
                                         <Setter Property="Foreground" Value="{StaticResource FgSecondary}"/>
@@ -289,7 +290,7 @@
                     <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                         <Border CornerRadius="12" Background="{StaticResource Bg2}" Padding="12" Margin="0,0,20,0">
                             <Border.Effect>
-                                <DropShadowEffect BlurRadius="15" Opacity="0.3" ShadowDepth="0" Color="#FF3B4A"/>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.3" ShadowDepth="0" Color="#A855F7"/>
                             </Border.Effect>
                             <Image Source="pack://application:,,,/Trident.MITM.App;component/Assets/LOGO.png" 
                                    Height="56" Width="56" Stretch="Uniform" 
@@ -299,7 +300,7 @@
                             <TextBlock Text="{DynamicResource AppName}" FontSize="24" FontWeight="Bold" 
                                        Foreground="{StaticResource Fg}">
                                 <TextBlock.Effect>
-                                    <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#FF3B4A"/>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#A855F7"/>
                                 </TextBlock.Effect>
                             </TextBlock>
                             <TextBlock Text="{DynamicResource License}" 
@@ -371,7 +372,7 @@
                     <!-- Notifications Status -->
                     <TextBlock x:Name="StatusText" 
                                Text="{DynamicResource Waiting}"
-                               Foreground="{StaticResource AccentRed}" 
+                               Foreground="{StaticResource AccentPurple}" 
                                TextWrapping="Wrap" 
                                FontSize="14" 
                                FontWeight="SemiBold"
@@ -430,10 +431,10 @@
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsFocused" Value="True">
-                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentPurple}"/>
                                                     <Setter TargetName="border" Property="Effect">
                                                         <Setter.Value>
-                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#FF3B4A"/>
+                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#A855F7"/>
                                                         </Setter.Value>
                                                     </Setter>
                                                 </Trigger>
@@ -464,10 +465,10 @@
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsFocused" Value="True">
-                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentPurple}"/>
                                                     <Setter TargetName="border" Property="Effect">
                                                         <Setter.Value>
-                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#FF3B4A"/>
+                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#A855F7"/>
                                                         </Setter.Value>
                                                     </Setter>
                                                 </Trigger>
@@ -499,7 +500,7 @@
                             
                             <Button Content="{DynamicResource SwitchToRegister}" 
                                     Background="Transparent"
-                                    Foreground="{StaticResource AccentRed}"
+                                    Foreground="{StaticResource AccentPurple}"
                                     BorderThickness="0"
                                     Padding="0"
                                     FontSize="13"
@@ -559,10 +560,10 @@
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsFocused" Value="True">
-                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentPurple}"/>
                                                     <Setter TargetName="border" Property="Effect">
                                                         <Setter.Value>
-                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#FF3B4A"/>
+                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#A855F7"/>
                                                         </Setter.Value>
                                                     </Setter>
                                                 </Trigger>
@@ -592,10 +593,10 @@
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsFocused" Value="True">
-                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentPurple}"/>
                                                     <Setter TargetName="border" Property="Effect">
                                                         <Setter.Value>
-                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#FF3B4A"/>
+                                                            <DropShadowEffect BlurRadius="10" Opacity="0.3" ShadowDepth="0" Color="#A855F7"/>
                                                         </Setter.Value>
                                                     </Setter>
                                                 </Trigger>
@@ -618,7 +619,7 @@
                             </Grid>
                             
                             <TextBlock Text="{DynamicResource LicenseKey}" 
-                                       Foreground="{StaticResource AccentRed}" 
+                                       Foreground="{StaticResource AccentPurple}" 
                                        FontSize="16" 
                                        FontWeight="Bold" 
                                        Margin="0,20,0,12"/>
@@ -626,7 +627,7 @@
                                 <TextBox x:Name="RegisterLicenseKeyTextBox" 
                                          Background="{StaticResource Bg2}"
                                          Foreground="{StaticResource Fg}"
-                                         BorderBrush="{StaticResource AccentRed}"
+                                         BorderBrush="{StaticResource AccentPurple}"
                                          BorderThickness="3"
                                          Padding="16,14"
                                          FontSize="15" 
@@ -651,10 +652,10 @@
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsFocused" Value="True">
-                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentRed}"/>
+                                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource AccentPurple}"/>
                                                     <Setter TargetName="border" Property="Effect">
                                                         <Setter.Value>
-                                                            <DropShadowEffect BlurRadius="15" Opacity="0.5" ShadowDepth="0" Color="#FF3B4A"/>
+                                                            <DropShadowEffect BlurRadius="15" Opacity="0.5" ShadowDepth="0" Color="#A855F7"/>
                                                         </Setter.Value>
                                                     </Setter>
                                                 </Trigger>
@@ -664,7 +665,7 @@
                                 </TextBox>
                                 <TextBlock x:Name="RegisterLicenseKeyPlaceholder"
                                            Text="⚠️ Entrez votre clé de licence ici..."
-                                           Foreground="{StaticResource AccentRed}"
+                                           Foreground="{StaticResource AccentPurple}"
                                            FontSize="15"
                                            FontFamily="Consolas"
                                            FontWeight="SemiBold"
@@ -685,7 +686,7 @@
                             
                             <Button Content="{DynamicResource SwitchToLogin}" 
                                     Background="Transparent"
-                                    Foreground="{StaticResource AccentRed}"
+                                    Foreground="{StaticResource AccentPurple}"
                                     BorderThickness="0"
                                     Padding="0"
                                     FontSize="13"

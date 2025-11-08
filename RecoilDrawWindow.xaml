@@ -12,7 +12,7 @@
         <SolidColorBrush x:Key="Bg0" Color="#0A0B10"/>
         <SolidColorBrush x:Key="Bg1" Color="#12131A"/>
         <SolidColorBrush x:Key="Bg2" Color="#1A1B24"/>
-        <SolidColorBrush x:Key="AccentCyan" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="AccentCyan" Color="#06B6D4"/>
         <SolidColorBrush x:Key="AccentRed" Color="#FF3366"/>
         <SolidColorBrush x:Key="Fg" Color="#F2F7FF"/>
         <SolidColorBrush x:Key="FgSub" Color="#A0A8B8"/>
@@ -40,7 +40,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="BorderBrush" Value="#00D9FF"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#06B6D4"/>
                                 <Setter TargetName="border" Property="Background" Value="#252632"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -88,7 +88,7 @@
                         Background="{StaticResource AccentCyan}"
                         Margin="0,0,20,0">
                     <Border.Effect>
-                        <DropShadowEffect Color="#00D9FF" BlurRadius="20" Opacity="0.8" ShadowDepth="0"/>
+                        <DropShadowEffect Color="#06B6D4" BlurRadius="20" Opacity="0.8" ShadowDepth="0"/>
                     </Border.Effect>
                     <TextBlock Text="🎯" FontSize="28" 
                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -172,7 +172,7 @@
                 CornerRadius="16" BorderThickness="2">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#00D9FF" Offset="0"/>
+                    <GradientStop Color="#06B6D4" Offset="0"/>
                     <GradientStop Color="#FF3366" Offset="1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>

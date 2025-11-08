@@ -8,12 +8,12 @@
     <Window.Resources>
         <!-- Gaming Overlay Colors -->
         <SolidColorBrush x:Key="OverlayBg" Color="#DD0A0B10"/>
-        <SolidColorBrush x:Key="OverlayAccent" Color="#00D9FF"/>
+        <SolidColorBrush x:Key="OverlayAccent" Color="#06B6D4"/>
         <SolidColorBrush x:Key="OverlayText" Color="#F2F7FF"/>
         <SolidColorBrush x:Key="OverlayGold" Color="#FFD700"/>
         
         <!-- Neon Glow Effect -->
-        <DropShadowEffect x:Key="NeonGlow" Color="#00D9FF" BlurRadius="20" Opacity="0.9" ShadowDepth="0"/>
+        <DropShadowEffect x:Key="NeonGlow" Color="#06B6D4" BlurRadius="20" Opacity="0.9" ShadowDepth="0"/>
         <DropShadowEffect x:Key="GoldGlow" Color="#FFD700" BlurRadius="15" Opacity="0.8" ShadowDepth="0"/>
     </Window.Resources>
     
@@ -27,7 +27,7 @@
         </Border.Background>
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#00D9FF" Offset="0"/>
+                <GradientStop Color="#06B6D4" Offset="0"/>
                 <GradientStop Color="#FF3366" Offset="1"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
@@ -40,7 +40,7 @@
             <Border x:Name="PulseLayer" CornerRadius="14" Opacity="0.15" IsHitTestVisible="False">
                 <Border.Background>
                     <RadialGradientBrush>
-                        <GradientStop Color="#00D9FF" Offset="0"/>
+                        <GradientStop Color="#06B6D4" Offset="0"/>
                         <GradientStop Color="Transparent" Offset="1"/>
                     </RadialGradientBrush>
                 </Border.Background>
