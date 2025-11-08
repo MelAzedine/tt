@@ -7,6 +7,68 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [Unreleased] - 2025-11-08
+
+### ✨ Added - CALL OF DUTY CHARACTER GENERATOR 🎮
+- **🎲 Random Character Generation**: Create unique Call of Duty soldiers instantly
+  - Authentic CoD-inspired names (Price, Mason, Woods, Ghost, Soap, etc.)
+  - Random callsigns (Shadow, Reaper, Phantom, Viper, etc.)
+  - Format: First Name "Callsign" Last Name
+  
+- **👤 Character Classes**: Four combat specializations with unique stat distributions
+  - **Assault**: Balanced offensive stats (Speed 65-85, Health 75-95)
+  - **Support**: Tank build with high survivability (Health 85-95, Armor 80-90)
+  - **Recon**: High mobility and precision (Speed 80-90, Accuracy 90-100)
+  - **Engineer**: Versatile balanced stats for tactical gameplay
+  
+- **🔫 Complete Loadout System**: Full weapon and equipment customization
+  - Primary weapons synced from trident.json weapon profiles
+  - Secondary weapons (pistols, melee)
+  - Tactical equipment (flash, smoke, stun, proximity sensor)
+  - Lethal equipment (frag, semtex, C4, claymore)
+  
+- **⭐ Perks System**: Three-tier perk selection
+  - Perk 1: Mobility (Lightweight, Ghost, Scavenger, EOD)
+  - Perk 2: Strategy (Ghost, Hardline, Overkill, Restock)
+  - Perk 3: Tactical (Amplified, Ninja, Spotter, Battle Hardened)
+  
+- **🎯 Killstreak Configuration**: Three-tier reward system
+  - 3 kills: UAV, Recon Drone, Cluster Strike
+  - 5 kills: Precision Airstrike, Sentry Turret, Air Strike
+  - 7 kills: Attack Helicopter, Care Package, Guided Missile
+  
+- **📊 Dynamic Stats System**: Class-based stat generation
+  - Speed, Health, Armor, Accuracy (0-100 range)
+  - Visual progress bars with real-time values
+  - Stats auto-adjusted based on selected class
+  
+- **🎨 Appearance Customization**: Visual personalization options
+  - 5 Camouflages: Urban, Forest, Desert, Arctic, Digital
+  - 5 Unit Emblems: War Eagle, Tactical Skull, Lightning, Target, Flames
+  
+- **💾 Save & Export Features**: Multiple export formats
+  - JSON format with structured data for future import
+  - Plain text format for easy sharing
+  - Auto-save to Documents\Trident_Characters\
+  - Timestamped filenames for organization
+  
+- **👁️ Live Preview**: Real-time character summary
+  - Formatted text preview showing all selections
+  - Updates dynamically with each change
+  - Easy-to-read layout for quick verification
+  
+- **🎮 UI Integration**: Seamless integration with existing tools
+  - New button in ToolsWindow: "🎮 Personnage CoD"
+  - Consistent dark theme styling with ARTHEMIS CONTROL
+  - French localization throughout
+  - Modern glassmorphism design matching app aesthetic
+  
+- **📖 Documentation**: Complete user guide
+  - CHARACTER_GENERATOR_GUIDE.md with full instructions
+  - Usage examples and FAQ
+  - JSON export structure documentation
+  - Future roadmap included
+
 ## [6.0.4] - 2025-11-08 - **BANGER UPDATE** 🔥
 
 ### ✨ Added - MAJOR VISUAL ENHANCEMENTS
