@@ -81,7 +81,10 @@
                         <RadioButton x:Name="RDark" Content="Sombre" IsChecked="True" Checked="Theme_Checked"/>
                         <RadioButton x:Name="RLight" Content="Clair" Margin="12,0,0,0" Checked="Theme_Checked"/>
                     </WrapPanel>
-                    <Image Source="/Assets/TRIDENT.png" Height="96" Margin="0,6,0,0"/>
+                    <Separator Margin="0,8"/>
+                    <TextBlock Text="Générateur" FontWeight="SemiBold"/>
+                    <Button Content="🎮 Personnage CoD" Click="CharacterGenerator_Click"/>
+                    <Image Source="/Assets/TRIDENT.png" Height="60" Margin="0,6,0,0"/>
                 </StackPanel>
             </Border>
 

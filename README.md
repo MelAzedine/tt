@@ -23,6 +23,19 @@
 
 ## 🌟 Features
 
+### 🎮 NEW: Call of Duty Character Generator
+**Create custom Call of Duty characters for immersive gameplay:**
+- 🎲 **Random Character Generation**: Instantly create unique soldiers with authentic CoD names
+- 👤 **Complete Loadouts**: Primary/secondary weapons, tactical/lethal equipment
+- ⭐ **Perks System**: Three perk slots with strategic advantages
+- 🎯 **Killstreaks**: Configure 3/5/7 elimination reward series
+- 📊 **Character Stats**: Speed, Health, Armor, Accuracy based on class
+- 💾 **Save & Export**: Store characters in JSON or text format
+- 🎨 **Appearance Customization**: Camouflages and unit emblems
+- 🏆 **4 Combat Classes**: Assault, Support, Recon, Engineer with unique stat distributions
+
+👉 **[See Character Generator Guide](CHARACTER_GENERATOR_GUIDE.md)**
+
 ### ⚡ BRAND NEW: Advanced Professional Features
 **Transform your gaming with professional-grade controller customization:**
 - 🎬 **Macro System**: Record and playback complex button sequences with precise timing
