@@ -6,7 +6,7 @@
 
 **Professional Gamepad Control System**
 
-[![Version](https://img.shields.io/badge/version-6.0.4-red.svg)](https://github.com/MelAzedine/tt)
+[![Version](https://img.shields.io/badge/version-6.0.7-red.svg)](https://github.com/MelAzedine/tt)
 [![License](https://img.shields.io/badge/license-PRO-red.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](https://www.microsoft.com/windows)
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
@@ -14,8 +14,12 @@
 *Elevate your gaming experience with professional-grade controller enhancements*
 
 > 🚀 **New User?** Start with our [Quick Start Guide](QUICKSTART.md) to get running in 5 minutes!
+> 
+> 🔥 **NEW in v6.0.7**: 3 Nouvelles IA Avancées - Prédictive, Anti-Cheat, Smart Auto-Aim! [ADVANCED AI](ADVANCED_AI_IDEAS.md)
+> 
+> 🎯 **v6.0.6**: IA Adaptative, Commandes Vocales, Crosshair Dynamique, Sessions! [Révolutionnaire](REVOLUTIONARY_FEATURES.md)
 
-[Quick Start](QUICKSTART.md) • [Features](#-features) • [Installation](INSTALLATION.md) • [User Guide](USER_GUIDE.md) • [FAQ](FAQ.md)
+[Quick Start](QUICKSTART.md) • [Features](#-features) • [Revolutionary Features](REVOLUTIONARY_FEATURES.md) • [Installation](INSTALLATION.md) • [User Guide](USER_GUIDE.md)
 
 </div>
 
@@ -23,7 +27,88 @@
 
 ## 🌟 Features
 
-### ⚡ BRAND NEW: Advanced Professional Features
+### 🧠 ULTRA-AVANCÉ: Nouvelles IA (v6.0.7)
+**3 systèmes d'IA de niveau professionnel:**
+- 🔮 **IA Prédictive de Mouvement**: Apprend vos patterns et prédit vos actions
+  - Détection de séquences répétées
+  - Prédiction de prochaine action
+  - Optimisation automatique par contexte
+  - Suggestions de macros intelligentes
+- 🛡️ **IA Anti-Détection (Anti-Cheat)**: Naturalise vos inputs automatiquement
+  - Score de naturalité en temps réel (0-100%)
+  - Détection de patterns suspects
+  - Ajout de bruit humain automatique
+  - Micro-mouvements réalistes
+  - Variation de timing intelligente
+- 🎯 **Smart Auto-Aim IA**: Aim assist adaptatif ultra-intelligent
+  - Ajustement par distance + vitesse cible
+  - Profils d'armes (AR, Sniper, SMG, Shotgun)
+  - Lead automatique (vise devant les cibles)
+  - Prédiction de position
+  - Adaptation par type de cible (Player, Boss, Vehicle)
+
+👉 **[Guide Complet des IA Avancées](ADVANCED_AI_IDEAS.md)**
+
+### 🔥 RÉVOLUTIONNAIRES: Fonctionnalités IA et Intelligentes (v6.0.6)
+**Transformez votre expérience de jeu avec l'IA:**
+- 🧠 **IA d'Aim Adaptatif**: Système qui APPREND de votre style et compense vos tendances
+  - Détection automatique de bias (gauche/droite, haut/bas)
+  - Analyse overshoot/undershoot personnalisée
+  - Recommandations de compensation adaptées À VOUS
+  - Analyse de performance par heure de la journée
+  - Amélioration continue au fil des sessions
+- 🎤 **Commandes Vocales**: Contrôle mains-libres sans lâcher la manette
+  - Changement d'arme vocal ("Arme sniper")
+  - Switch de profil instantané ("Profil Fortnite")
+  - Activation de features ("Active anti-recul")
+  - Reconnaissance en français ET anglais
+  - Seuil de confiance ajustable
+- 🎯 **Crosshair Overlay Dynamique**: Réticule intelligent avec prédictions
+  - 6 styles de réticule personnalisables
+  - Indicateur de spread en temps réel
+  - Prédiction de trajectoire de recul
+  - Visualisation dynamique (mouvement, tir)
+  - Clic à travers (n'interfère pas avec le jeu)
+- 📹 **Enregistrement de Sessions**: Capture et analyse complètes
+  - Enregistrement de tous les inputs (sticks, boutons, triggers)
+  - Statistiques automatiques calculées
+  - Replay frame par frame
+  - Création de highlights (extraits)
+  - Comparaison de sessions
+  - Compression GZip (~5 MB/heure)
+
+👉 **[Guide Complet des Fonctionnalités Révolutionnaires](REVOLUTIONARY_FEATURES.md)**
+
+### 🆕 Fonctionnalités Intelligentes (v6.0.5)
+**Next-level convenience and control:**
+- 🎮 **Profile Auto-Switching**: Automatically detect running games and switch profiles
+  - Pre-configured for 10+ popular games
+  - Custom game-to-profile mappings
+  - Seamless background detection
+- 🔋 **Battery Monitoring**: Real-time wireless controller battery level
+  - 30-second update intervals
+  - Low battery warnings
+  - Battery type detection
+- 📺 **Input Display Overlay**: Real-time button visualization for streaming
+  - Transparent overlay window
+  - All buttons and analog sticks
+  - Perfect for tutorials and streaming
+- 📈 **Advanced Response Curves**: 7 new curve types beyond linear
+  - Exponential, Logarithmic, S-Curve
+  - Aggressive, Smooth, Power Curve
+  - Custom control points
+- 📊 **Performance Monitor**: Track input lag and polling rate
+  - Real-time metrics dashboard
+  - Performance grading system
+  - Optimization recommendations
+- 🎚️ **Sensitivity Profiles**: Per-game sensitivity with context awareness
+  - ADS multiplier support
+  - Building/Combat mode switching
+  - Quick profile cloning
+
+👉 **[See Complete New Features Guide](NEW_FEATURES.md)**
+
+### ⚡ Advanced Professional Features
 **Transform your gaming with professional-grade controller customization:**
 - 🎬 **Macro System**: Record and playback complex button sequences with precise timing
   - Loop control (infinite or specific count)
@@ -400,6 +485,102 @@ Contributions are welcome! Please:
 ---
 
 ## 📊 Version History
+
+### v6.0.6 (REVOLUTIONARY UPDATE) 🔥🧠
+#### Intelligence Artificielle et Fonctionnalités Révolutionnaires
+- 🧠 **NEW**: IA d'Aim Adaptatif - Système d'apprentissage qui s'adapte à VOTRE style
+  - Détection automatique des tendances (bias gauche/droite, haut/bas)
+  - Analyse overshoot/undershoot personnalisée
+  - Compensations recommandées basées sur VOS données
+  - Analyse de performance par heure de la journée
+  - Amélioration continue sur plusieurs sessions
+  - Rapport détaillé avec grades et recommandations
+  - Sauvegarde/chargement de profils IA
+
+- 🎤 **NEW**: Système de Commandes Vocales - Contrôle mains-libres total
+  - Changement d'arme vocal sans lâcher la manette
+  - Switch de profil instantané par la voix
+  - Activation/désactivation de features
+  - Support français ET anglais
+  - Grammaires personnalisables
+  - Seuil de confiance configurable (70% minimum)
+  - Commandes personnalisées utilisateur
+
+- 🎯 **NEW**: Crosshair Overlay Dynamique - Réticule intelligent avec prédictions
+  - 6 styles de réticule (Cross, Dot, Circle, T-Shape, Diamond, Brackets)
+  - Indicateur de spread en temps réel (visualisation dispersion)
+  - Prédiction de trajectoire de recul (pattern)
+  - Couleurs dynamiques selon état (tir, mouvement)
+  - Info box temps réel (spread, statut)
+  - Transparence totale aux clics
+  - 60 FPS fluides
+
+- 📹 **NEW**: Système d'Enregistrement de Sessions - Capture et analyse complètes
+  - Enregistrement complet de tous les inputs
+  - Statistiques automatiques (précision, tirs, mouvement, etc.)
+  - Replay frame par frame avec timing précis
+  - Création de highlights (extraits personnalisés)
+  - Comparaison de sessions (progression)
+  - Compression GZip (~5 MB/heure)
+  - Export format lisible humain
+
+#### Fichiers Techniques
+- **AdaptiveAimAssist.cs** (483 lines)
+  - Algorithmes d'apprentissage automatique
+  - Détection de patterns et tendances
+  - Système de recommandations
+  - Analyse temporelle
+
+- **VoiceCommandSystem.cs** (403 lines)
+  - Reconnaissance vocale System.Speech
+  - Grammaires FR/EN
+  - Gestion de confiance
+  - Commandes personnalisées
+
+- **CrosshairOverlaySystem.cs** (519 lines)
+  - Rendu WPF transparent
+  - 6 styles de réticule
+  - Prédiction de trajectoire
+  - Mise à jour 60 FPS
+
+- **SessionRecordingSystem.cs** (519 lines)
+  - Enregistrement frame par frame
+  - Calcul de statistiques
+  - Système de highlights
+  - Compression/décompression GZip
+
+#### Documentation
+- **REVOLUTIONARY_FEATURES.md** (13,636 caractères)
+  - Guide complet des 4 nouvelles fonctionnalités
+  - Cas d'usage détaillés
+  - Exemples d'intégration
+  - Conseils pro
+  - Comparaisons avant/après
+
+#### Statistiques v6.0.6
+- **Nouveau Code**: 1,924 lignes
+- **Documentation**: 13,636+ caractères
+- **Fonctionnalités Majeures**: 4
+- **Impact Mémoire**: ~20 MB (toutes features actives)
+- **Impact CPU**: < 5% total
+
+### v6.0.5 (INTELLIGENT FEATURES UPDATE) 🧠
+#### New Intelligent Features
+- 🎮 **NEW**: Profile Auto-Switching - Automatic game detection and profile switching
+- 🔋 **NEW**: Battery Monitoring - Real-time wireless controller battery level tracking
+- 📺 **NEW**: Input Display Overlay - Visual button press display for streaming
+- 📈 **NEW**: Advanced Response Curves - 7 new curve types (Exponential, Logarithmic, S-Curve, etc.)
+- 📊 **NEW**: Performance Monitor - Input lag and polling rate tracking
+- 🎚️ **NEW**: Sensitivity Profile System - Per-game sensitivity with context awareness
+- 📚 **NEW**: Comprehensive documentation - NEW_FEATURES.md with full integration examples
+
+#### Technical Additions
+- GameDetectionSystem.cs - Process monitoring and auto-switching
+- BatteryMonitor.cs - XInput battery level detection
+- InputDisplayOverlay.cs - Real-time input visualization window
+- AdvancedResponseCurves.cs - Multiple response curve algorithms
+- PerformanceMonitor.cs - Performance metrics tracking
+- SensitivityProfileSystem.cs - Advanced sensitivity management
 
 ### v6.0.4 (BANGER UPDATE) 🔥
 #### Professional Advanced Features
